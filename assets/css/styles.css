@@ -1139,6 +1139,24 @@ img {
   pointer-events: none;
 }
 
+.price-card .btn {
+  min-width: 0;
+}
+
+.price-card:not(.price-card--selected) .btn.btn--primary {
+  background: transparent;
+  color: var(--text);
+  border-color: rgba(148, 163, 184, 0.7);
+  box-shadow: none;
+}
+
+.price-card--selected .btn {
+  background: var(--accent-gradient);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 24px rgba(168, 85, 247, 0.45);
+}
+
 .price-card:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
