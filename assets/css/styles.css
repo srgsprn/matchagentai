@@ -809,6 +809,14 @@ img {
   70% { transform: translateY(-2px) scale(1.03) rotate(2deg); opacity: 0.9; }
 }
 
+@keyframes stepIconMobileFloat {
+  0% { transform: translateY(0) scale(1); opacity: 0.96; }
+  25% { transform: translateY(-4px) scale(1.03); opacity: 1; }
+  50% { transform: translateY(2px) scale(0.99); opacity: 0.95; }
+  75% { transform: translateY(-3px) scale(1.02); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 0.96; }
+}
+
 /* ===== Gallery — Profile, Connection, Assistant + animations ===== */
 .gallery {
   padding: 100px 0;
@@ -1676,6 +1684,14 @@ img {
 
   .how__steps {
     grid-template-columns: 1fr;
+  }
+
+  .how__steps .step {
+    transform: none;
+  }
+
+  .how__steps .step__icon {
+    animation: stepIconMobileFloat 3.2s ease-in-out infinite;
   }
 
   .pricing__grid {
