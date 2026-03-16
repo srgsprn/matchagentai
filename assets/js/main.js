@@ -292,9 +292,10 @@
     });
   });
 
-  // ----- Smooth scroll -----
+  // ----- Smooth scroll (except pricing cards) -----
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
+      if (anchor.closest('.price-card')) return;
       var id = this.getAttribute('href');
       if (id === '#') return;
       var target = document.querySelector(id);
