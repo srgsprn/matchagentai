@@ -1146,6 +1146,7 @@ img {
 .price-card:not(.price-card--selected) .btn.btn--primary {
   background: transparent;
   color: var(--accent);
+  -webkit-text-fill-color: var(--accent);
   border-color: rgba(236, 72, 153, 0.65);
   box-shadow: none;
 }
