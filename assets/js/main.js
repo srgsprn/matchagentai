@@ -281,28 +281,14 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // ----- Pricing: one selected card, no scroll jump, pink button on selected only -----
+  // ----- Pricing: one selected card, no scroll jump; button style only via CSS -----
   document.querySelectorAll('.price-card').forEach(function (card) {
     card.addEventListener('click', function (e) {
       e.preventDefault();
-
-      // Reset selection and button styles for all cards
       document.querySelectorAll('.price-card').forEach(function (c) {
         c.classList.remove('price-card--selected');
-        var btn = c.querySelector('.btn');
-        if (btn) {
-          btn.classList.remove('btn--primary');
-          btn.classList.add('btn--outline');
-        }
       });
-
-      // Mark current card as selected and make its button primary/pink
       card.classList.add('price-card--selected');
-      var currentBtn = card.querySelector('.btn');
-      if (currentBtn) {
-        currentBtn.classList.remove('btn--outline');
-        currentBtn.classList.add('btn--primary');
-      }
     });
   });
 
