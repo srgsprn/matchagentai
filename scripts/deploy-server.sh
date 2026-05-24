@@ -1,11 +1,12 @@
 #!/bin/bash
 # Запускать на VPS (Ubuntu) под root или sudo.
-# Перед запуском загрузите файлы в /var/www/svtdating.com (scp или git clone).
+# Перед запуском загрузите файлы в /var/www/matchagentai.com (scp или git clone).
 
 set -e
-SITE_DIR="/var/www/svtdating.com"
-NGINX_AVAILABLE="/etc/nginx/sites-available/svtdating.com"
-NGINX_ENABLED="/etc/nginx/sites-enabled/svtdating.com"
+SITE_DIR="/var/www/matchagentai.com"
+NGINX_AVAILABLE="/etc/nginx/sites-available/matchagentai.com"
+NGINX_ENABLED="/etc/nginx/sites-enabled/matchagentai.com"
+GITHUB_REPO="https://github.com/srgsprn/matchagentai.git"
 
 echo "[1/6] Обновление системы..."
 apt-get update -qq && apt-get upgrade -y -qq
@@ -18,7 +19,7 @@ mkdir -p "$SITE_DIR"
 if [ ! -f "$SITE_DIR/index.html" ]; then
   if command -v git >/dev/null 2>&1; then
     echo "    index.html не найден, клонирую из GitHub..."
-    ( cd "$SITE_DIR" && git clone --depth 1 https://github.com/srgsprn/svt_dating.git .tmp_clone && cp -r .tmp_clone/. . && rm -rf .tmp_clone ) || true
+    ( cd "$SITE_DIR" && git clone --depth 1 "$GITHUB_REPO" .tmp_clone && cp -r .tmp_clone/. . && rm -rf .tmp_clone ) || true
   fi
 fi
 if [ ! -f "$SITE_DIR/index.html" ]; then
@@ -31,8 +32,8 @@ echo "[4/6] Конфиг nginx..."
 cat > "$NGINX_AVAILABLE" << 'EOF'
 server {
     listen 80;
-    server_name svtdating.com www.svtdating.com;
-    root /var/www/svtdating.com;
+    server_name matchagentai.com www.matchagentai.com;
+    root /var/www/matchagentai.com;
     index index.html;
     location / {
         try_files $uri $uri/ =404;
@@ -49,14 +50,14 @@ echo "[5/6] HTTPS (Let's Encrypt)..."
 if ! command -v certbot >/dev/null 2>&1; then
   apt-get install -y -qq certbot python3-certbot-nginx
 fi
-if [ -d /etc/letsencrypt/live/svtdating.com ]; then
+if [ -d /etc/letsencrypt/live/matchagentai.com ]; then
   echo "    Сертификат уже есть, обновление..."
   certbot renew --quiet --nginx 2>/dev/null || true
 else
-  certbot --nginx -d svtdating.com -d www.svtdating.com \
+  certbot --nginx -d matchagentai.com -d www.matchagentai.com \
     --non-interactive --agree-tos \
     --register-unsafely-without-email || true
 fi
 
 echo "[6/6] Готово."
-echo "Проверьте: https://svtdating.com"
+echo "Проверьте: https://matchagentai.com"

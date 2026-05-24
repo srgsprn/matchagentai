@@ -37,4 +37,4 @@ python3 -m http.server 8080
 ## Деплой
 
 - **Одной командой:** создайте репозиторий на GitHub и настройте SSH к VPS, затем выполните `./scripts/deploy-local.sh` — см. [DEPLOY.md](DEPLOY.md).
-- Подробные шаги вручную — в [DEPLOY.md](DEPLOY.md): GitHub, Ubuntu, nginx, домен svtdating.com, Let's Encrypt.
+- Подробные шаги вручную — в [DEPLOY.md](DEPLOY.md): GitHub, Ubuntu, nginx, домен matchagentai.com, Let's Encrypt.

@@ -1,8 +1,8 @@
-# Публикация SVT Dating: GitHub и VPS (nginx + HTTPS)
+# Публикация MatchAgent AI: GitHub и VPS (nginx + HTTPS)
 
-Домен: **svtdating.com**  
+Домен: **matchagentai.com**  
 IP VPS: **85.239.51.175**  
-GitHub: **srgsprn** / репозиторий **svt_dating**
+GitHub: **srgsprn** / репозиторий **matchagentai**
 
 ---
 
@@ -25,7 +25,7 @@ chmod 600 ~/.ssh/authorized_keys
 
 При каждом `git push origin main` сайт на VPS обновляется автоматически (в репозитории настроен workflow `.github/workflows/deploy.yml`).
 
-**Один раз настройте секреты в GitHub:** репозиторий **svt_dating** → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**. Добавьте:
+**Один раз настройте секреты в GitHub:** репозиторий **matchagentai** → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**. Добавьте:
 
 | Имя | Значение |
 |-----|----------|
@@ -39,7 +39,7 @@ chmod 600 ~/.ssh/authorized_keys
 
 ## Быстрый деплой одной командой
 
-1. **Создайте репозиторий** на GitHub: [github.com/new](https://github.com/new) → имя `svt_dating`, Public, без README.
+1. **Создайте репозиторий** на GitHub: [github.com/new](https://github.com/new) → имя `matchagentai`, Public, без README.
 2. **Настройте SSH-доступ** к VPS (пароль или ключ): `ssh root@85.239.51.175` должен открывать сессию.
 3. Из папки проекта выполните:
    ```bash
@@ -52,7 +52,7 @@ chmod 600 ~/.ssh/authorized_keys
 
 **Только сервер:** если файлы уже на VPS (например, залиты через SCP), подключитесь по SSH и выполните:
 ```bash
-curl -sL https://raw.githubusercontent.com/srgsprn/svt_dating/main/scripts/deploy-server.sh | sudo bash
+curl -sL https://raw.githubusercontent.com/srgsprn/matchagentai/main/scripts/deploy-server.sh | sudo bash
 ```
 или скопируйте содержимое `scripts/deploy-server.sh` и выполните на сервере.
 
@@ -64,7 +64,7 @@ curl -sL https://raw.githubusercontent.com/srgsprn/svt_dating/main/scripts/deplo
 
 1. Зайдите на [github.com](https://github.com), войдите под логином **srgsprn**.
 2. Нажмите **"New"** (или **"+"** → **"New repository"**).
-3. **Repository name:** `svt_dating`.
+3. **Repository name:** `matchagentai`.
 4. Выберите **Public**.
 5. **Не** ставьте галочки "Add a README", ".gitignore", "License" — репозиторий должен быть пустым.
 6. Нажмите **"Create repository"**.
@@ -80,7 +80,7 @@ git init
 git add .
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/srgsprn/svt_dating.git
+git remote add origin https://github.com/srgsprn/matchagentai.git
 git push -u origin main
 ```
 
@@ -115,8 +115,8 @@ sudo apt install nginx -y
 ### 2.4. Директория для сайта
 
 ```bash
-sudo mkdir -p /var/www/svtdating.com
-sudo chown -R $USER:$USER /var/www/svtdating.com
+sudo mkdir -p /var/www/matchagentai.com
+sudo chown -R $USER:$USER /var/www/matchagentai.com
 ```
 
 ### 2.5. Копирование файлов на сервер
@@ -126,28 +126,28 @@ sudo chown -R $USER:$USER /var/www/svtdating.com
 На сервере:
 
 ```bash
-cd /var/www/svtdating.com
-git clone https://github.com/srgsprn/svt_dating.git .
+cd /var/www/matchagentai.com
+git clone https://github.com/srgsprn/matchagentai.git .
 ```
 
-Точка в конце команды клонирует содержимое репозитория прямо в текущую папку `/var/www/svtdating.com`.
+Точка в конце команды клонирует содержимое репозитория прямо в текущую папку `/var/www/matchagentai.com`.
 
 **Вариант Б — через SCP с вашего компьютера**
 
 На **локальном** компьютере (в папке, где лежит `svt_dating`):
 
 ```bash
-scp -r index.html assets root@85.239.51.175:/var/www/svtdating.com/
+scp -r index.html assets root@85.239.51.175:/var/www/matchagentai.com/
 ```
 
-Или упакуйте проект в архив, залейте по SFTP/SCP и на сервере распакуйте в `/var/www/svtdating.com`.
+Или упакуйте проект в архив, залейте по SFTP/SCP и на сервере распакуйте в `/var/www/matchagentai.com`.
 
 ### 2.6. Конфиг nginx для домена
 
 Создайте файл конфигурации:
 
 ```bash
-sudo nano /etc/nginx/sites-available/svtdating.com
+sudo nano /etc/nginx/sites-available/matchagentai.com
 ```
 
 Вставьте:
@@ -155,8 +155,8 @@ sudo nano /etc/nginx/sites-available/svtdating.com
 ```nginx
 server {
     listen 80;
-    server_name svtdating.com www.svtdating.com;
-    root /var/www/svtdating.com;
+    server_name matchagentai.com www.matchagentai.com;
+    root /var/www/matchagentai.com;
     index index.html;
     location / {
         try_files $uri $uri/ =404;
@@ -169,14 +169,14 @@ server {
 Включите сайт и проверьте конфиг:
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/svtdating.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/matchagentai.com /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl reload nginx
 ```
 
 ### 2.7. Привязка домена к VPS
 
-В панели регистратора домена **svtdating.com**:
+В панели регистратора домена **matchagentai.com**:
 
 1. Откройте раздел DNS (управление DNS, зона, записи).
 2. Создайте или измените **A-записи**:
@@ -186,8 +186,8 @@ sudo systemctl reload nginx
 Сохранение может занять от нескольких минут до 24 часов. Проверка с вашего компьютера:
 
 ```bash
-dig svtdating.com +short
-dig www.svtdating.com +short
+dig matchagentai.com +short
+dig www.matchagentai.com +short
 ```
 
 Оба должны вернуть `85.239.51.175`. Альтернатива: [whoer.net](https://whoer.net) или сервисы проверки DNS.
@@ -198,7 +198,7 @@ dig www.svtdating.com +short
 
 ```bash
 sudo apt install certbot python3-certbot-nginx -y
-sudo certbot --nginx -d svtdating.com -d www.svtdating.com
+sudo certbot --nginx -d matchagentai.com -d www.matchagentai.com
 ```
 
 Следуйте подсказкам (email, согласие с условиями). Certbot сам настроит HTTPS в nginx и автообновление сертификата.
@@ -208,26 +208,26 @@ sudo certbot --nginx -d svtdating.com -d www.svtdating.com
 **Если сайт развёрнут через Git:**
 
 ```bash
-cd /var/www/svtdating.com
+cd /var/www/matchagentai.com
 git pull origin main
 ```
 
-**Если файлы заливаете вручную** — просто замените файлы в `/var/www/svtdating.com` (через SCP/SFTP или снова распакуйте архив).
+**Если файлы заливаете вручную** — просто замените файлы в `/var/www/matchagentai.com` (через SCP/SFTP или снова распакуйте архив).
 
 ---
 
 ## Краткий чек-лист
 
-1. Создать репозиторий **svt_dating** на GitHub (пустой).
-2. Локально: `git init`, `git add .`, `git commit -m "Initial commit"`, `git branch -M main`, `git remote add origin https://github.com/srgsprn/svt_dating.git`, `git push -u origin main`.
+1. Создать репозиторий **matchagentai** на GitHub (пустой).
+2. Локально: `git init`, `git add .`, `git commit -m "Initial commit"`, `git branch -M main`, `git remote add origin https://github.com/srgsprn/matchagentai.git`, `git push -u origin main`.
 3. Подключиться к VPS: `ssh root@85.239.51.175`.
 4. Обновить систему: `sudo apt update && sudo apt upgrade -y`.
 5. Установить nginx: `sudo apt install nginx -y`, проверить по IP в браузере.
-6. Создать каталог: `sudo mkdir -p /var/www/svtdating.com`, `sudo chown -R $USER:$USER /var/www/svtdating.com`.
-7. Скопировать сайт: на сервере `cd /var/www/svtdating.com` и `git clone https://github.com/srgsprn/svt_dating.git .` (или залить файлы по SCP).
-8. Создать конфиг nginx в `/etc/nginx/sites-available/svtdating.com`, сделать симлинк в `sites-enabled`, `sudo nginx -t`, `sudo systemctl reload nginx`.
+6. Создать каталог: `sudo mkdir -p /var/www/matchagentai.com`, `sudo chown -R $USER:$USER /var/www/matchagentai.com`.
+7. Скопировать сайт: на сервере `cd /var/www/matchagentai.com` и `git clone https://github.com/srgsprn/matchagentai.git .` (или залить файлы по SCP).
+8. Создать конфиг nginx в `/etc/nginx/sites-available/matchagentai.com`, сделать симлинк в `sites-enabled`, `sudo nginx -t`, `sudo systemctl reload nginx`.
 9. В DNS у регистратора добавить A-записи для @ и www на 85.239.51.175.
-10. Установить certbot: `sudo apt install certbot python3-certbot-nginx -y`, затем `sudo certbot --nginx -d svtdating.com -d www.svtdating.com`.
-11. Проверить открытие по https://svtdating.com и https://www.svtdating.com.
+10. Установить certbot: `sudo apt install certbot python3-certbot-nginx -y`, затем `sudo certbot --nginx -d matchagentai.com -d www.matchagentai.com`.
+11. Проверить открытие по https://matchagentai.com и https://www.matchagentai.com.
 
 Готово.

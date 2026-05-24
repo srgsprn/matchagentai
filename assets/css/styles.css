@@ -170,9 +170,9 @@ img {
 }
 
 .header__brand .header__logo-img {
-  height: 68px;
+  height: 72px;
   width: auto;
-  max-width: 180px;
+  max-width: 140px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -1449,12 +1449,8 @@ img {
   }
 
   .header__brand .header__logo-img {
-    height: 52px;
-    max-width: 120px;
-  }
-
-  .header__brand .logo {
-    font-size: 1.15rem;
+    height: 56px;
+    max-width: 110px;
   }
 
   .header__tagline {

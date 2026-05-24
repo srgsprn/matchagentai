@@ -14,4 +14,4 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.DEPLOY_SSH_KEY }}
           script: |
-            cd /var/www/svtdating.com && git pull origin main
+            cd /var/www/matchagentai.com && git pull origin main
