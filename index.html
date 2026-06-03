@@ -3,47 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="MatchAgent — your AI matches assistant. Find your people through voice and real conversation, without endless swiping.">
-  <meta name="keywords" content="dating, relationships, voice dating, AI matches, dating app, MatchAgent">
+  <meta name="description" content="MatchAgent — your AI matches assistant. Intelligent dating without endless swiping.">
+  <meta name="keywords" content="dating, AI matches, MatchAgent, premium dating">
   <title>MatchAgent — Your AI Matches Assistant</title>
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://matchagentai.com/">
   <meta property="og:title" content="MatchAgent — Your AI Matches Assistant">
-  <meta property="og:description" content="Find your people through voice and real conversation. No swiping — just real connection.">
+  <meta property="og:description" content="Intelligent matching. Zero noise. Real connection.">
   <meta property="og:image" content="https://matchagentai.com/assets/img/og-preview.png">
-  <meta property="og:locale" content="en_US">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+  <div class="page-noise" aria-hidden="true"></div>
+
   <header class="header">
     <div class="container header__inner">
       <a href="#" class="header__brand">
-        <img class="header__logo-img" src="assets/img/logo-header.png" alt="MatchAgent — Your AI Matches Assistant" width="120" height="120">
+        <img class="header__logo-img" src="assets/img/logo-header.png" alt="MatchAgent" width="120" height="120">
       </a>
-      <div class="header__auth">
-        <a href="#signin" class="btn btn--outline header__btn" data-i18n="nav_signin">Sign in</a>
-        <a href="#register" class="btn btn--primary header__cta" data-i18n="nav_register">Register</a>
-      </div>
-      <div class="header__controls">
-        <div class="theme-switcher" role="group" aria-label="Theme">
-          <button type="button" class="theme-switcher__btn" data-theme="dark" aria-pressed="true" title="Dark theme">🌙</button>
-          <button type="button" class="theme-switcher__btn" data-theme="light" aria-pressed="false" title="Light theme">☀️</button>
-        </div>
+      <nav class="nav" aria-label="Main">
+        <a href="#product" class="nav__link" data-i18n="nav_product">Product</a>
+        <a href="#how" class="nav__link" data-i18n="nav_how">How it works</a>
+        <a href="#app" class="nav__link" data-i18n="nav_app">Inside the app</a>
+        <a href="#pricing" class="nav__link" data-i18n="nav_pricing">Pricing</a>
+      </nav>
+      <div class="header__actions">
         <div class="lang-switcher" role="group" aria-label="Language">
           <button type="button" class="lang-switcher__btn" data-lang="ru" aria-pressed="false">RU</button>
           <button type="button" class="lang-switcher__btn active" data-lang="en" aria-pressed="true">EN</button>
         </div>
+        <a href="#register" class="btn btn--primary btn--sm header__cta" data-i18n="nav_register">Get started</a>
       </div>
       <button type="button" class="burger" aria-label="Open menu" aria-expanded="false" data-i18n-attr="aria-label" data-i18n-attr-key="aria_menu">
         <span></span><span></span><span></span>
@@ -52,151 +47,285 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero__inner">
-        <p class="hero__label" data-i18n="hero_label">A new way to date</p>
-        <h1 class="hero__title" data-i18n="hero_title">Your time matters!</h1>
-        <p class="hero__subtitle" data-i18n="hero_subtitle">Stop scrolling the feed. Leave the routine to us.</p>
+    <!-- 1. Hero -->
+    <section class="hero" id="top">
+      <div class="hero__ambient" aria-hidden="true">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+        <div class="hero__grid"></div>
+        <div class="hero__streak"></div>
+      </div>
+      <div class="container hero__inner reveal">
+        <p class="eyebrow" data-i18n="hero_label">AI-powered matching</p>
+        <h1 class="hero__title">
+          <span data-i18n="hero_title_1">Dating,</span>
+          <span class="hero__title-accent" data-i18n="hero_title_2">elevated.</span>
+        </h1>
+        <p class="hero__subtitle" data-i18n="hero_subtitle">Your personal AI agent screens, converses, and curates — so you only meet people who truly fit.</p>
         <div class="hero__actions">
-          <a href="#register" class="btn btn--primary btn--lg" data-i18n="hero_btn_join">Join now</a>
-          <a href="#how" class="btn btn--outline btn--lg" data-i18n="hero_btn_how">How it works</a>
+          <a href="#register" class="btn btn--primary btn--lg" data-i18n="hero_btn_join">Start free trial</a>
+          <a href="#how" class="btn btn--ghost btn--lg" data-i18n="hero_btn_how">See how it works</a>
+        </div>
+        <p class="hero__note" data-i18n="hero_note">3 days free · No card required to explore</p>
+      </div>
+      <div class="hero__fade" aria-hidden="true"></div>
+    </section>
+
+    <!-- 2. Trust strip -->
+    <section class="stats" aria-label="Trust metrics">
+      <div class="container">
+        <ul class="stats__grid reveal-stagger">
+          <li class="stat">
+            <span class="stat__value" data-i18n="stat_1_val">1,000+</span>
+            <span class="stat__label" data-i18n="stat_1_label">Parallel AI dialogues</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value" data-i18n="stat_2_val">98%</span>
+            <span class="stat__label" data-i18n="stat_2_label">Noise filtered out</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value" data-i18n="stat_3_val">24/7</span>
+            <span class="stat__label" data-i18n="stat_3_label">Agent always on</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value" data-i18n="stat_4_val">Private</span>
+            <span class="stat__label" data-i18n="stat_4_label">Contacts on your terms</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. Product -->
+    <section class="product section" id="product">
+      <div class="container product__grid">
+        <div class="product__copy reveal">
+          <p class="eyebrow" data-i18n="product_eyebrow">The MatchAgent difference</p>
+          <h2 class="section-title" data-i18n="intro_title">Intelligence meets intention</h2>
+          <p class="section-lead" data-i18n="intro_text">Stop feeding algorithms your attention. Tell MatchAgent who you are and who you want — our agent runs the conversations, validates compatibility, and delivers a shortlist worth your evening.</p>
+          <ul class="product__points">
+            <li data-i18n="product_p1">Criteria-driven matching, not random swipes</li>
+            <li data-i18n="product_p2">Deep screening before you ever say hello</li>
+            <li data-i18n="product_p3">Full transparency in your private dashboard</li>
+          </ul>
+        </div>
+        <div class="product__visual reveal reveal--delay">
+          <div class="glass-panel glass-panel--glow">
+            <div class="glass-panel__header">
+              <span class="glass-panel__dot"></span>
+              <span class="glass-panel__dot"></span>
+              <span class="glass-panel__dot"></span>
+            </div>
+            <div class="glass-panel__body">
+              <p class="glass-panel__label" data-i18n="panel_label">Live agent status</p>
+              <p class="glass-panel__metric"><span data-i18n="panel_metric">847</span> <small data-i18n="panel_metric_sub">screened today</small></p>
+              <div class="glass-panel__bars" aria-hidden="true">
+                <span style="--h:72%"></span><span style="--h:45%"></span><span style="--h:88%"></span><span style="--h:61%"></span><span style="--h:94%"></span>
+              </div>
+              <p class="glass-panel__footer" data-i18n="panel_footer">12 matches ready for review</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="hero__hearts" aria-hidden="true">
-        <svg class="hero__heart hero__heart--left" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="hero__heart-path" d="M50 78C50 78 5 45 5 22C5 2 28 2 50 28C72 2 95 2 95 22C95 45 50 78 50 78Z"/>
-        </svg>
-        <svg class="hero__heart hero__heart--right" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="hero__heart-path" d="M50 78C50 78 5 45 5 22C5 2 28 2 50 28C72 2 95 2 95 22C95 45 50 78 50 78Z"/>
-        </svg>
-        <svg class="hero__heart hero__heart--merged" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="hero__heart-path" d="M50 78C50 78 5 45 5 22C5 2 28 2 50 28C72 2 95 2 95 22C95 45 50 78 50 78Z"/>
-        </svg>
+    </section>
+
+    <!-- 4. How it works -->
+    <section class="how section" id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="how_eyebrow">Process</p>
+          <h2 class="section-title" data-i18n="how_title">Three steps to better dates</h2>
+        </div>
+        <ol class="how__timeline reveal-stagger">
+          <li class="step-card">
+            <span class="step-card__num">01</span>
+            <div class="step-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 14a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" stroke-width="1.5"/><path d="M19 11v1a7 7 0 01-14 0v-1M12 19v2M8 21h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="step-card__title" data-i18n="s1_title">Define yourself</h3>
+            <p class="step-card__text" data-i18n="s1_text">Share what matters — values, lifestyle, boundaries. The richer the input, the sharper the agent.</p>
+          </li>
+          <li class="step-card">
+            <span class="step-card__num">02</span>
+            <div class="step-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h10M4 18h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="18" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="step-card__title" data-i18n="s2_title">Brief your agent</h3>
+            <p class="step-card__text" data-i18n="s2_text">Describe your ideal match in detail. MatchAgent analyzes photos, tone, interests, and runs structured compatibility checks.</p>
+          </li>
+          <li class="step-card">
+            <span class="step-card__num">03</span>
+            <div class="step-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.4 4.8 5.4.8-3.9 3.8.9 5.4L12 15.8 7.2 17.8l.9-5.4L4.2 8.6l5.4-.8L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="step-card__title" data-i18n="s3_title">Meet your shortlist</h3>
+            <p class="step-card__text" data-i18n="s3_text">Receive vetted candidates with full context. Choose the restaurant — we handled the rest.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section class="intro" id="intro">
+    <!-- 5. App showcase -->
+    <section class="app-showcase section" id="app">
       <div class="container">
-        <h2 class="section-title" data-i18n="intro_title">Real dating with MatchAgent</h2>
-        <p class="intro__text" data-i18n="intro_text">
-          MatchAgent helps you move beyond endless swiping. You tell us about yourself and set the task for our agent — it does all the work for you: finds matches to your criteria and filters out the rest. Your personal AI assistant can run 1000 conversations at once and pick what you want. All you have to do is get ready for the date and choose the restaurant.
-        </p>
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow" data-i18n="gallery_eyebrow">Inside MatchAgent</p>
+          <h2 class="section-title" data-i18n="gallery_title">Your command center</h2>
+          <p class="section-lead section-lead--center" data-i18n="gallery_lead">Replace placeholders with your Telegram bot screenshots — drop images into each phone frame.</p>
+        </div>
+        <div class="phones reveal-stagger">
+          <article class="phone phone--left">
+            <div class="phone__frame">
+              <div class="phone__notch" aria-hidden="true"></div>
+              <div class="phone__screen">
+                <!-- Replace: add <img src="assets/img/screenshot-profile.png" alt=""> -->
+                <div class="phone__placeholder" data-i18n="g1_label">
+                  <span class="phone__placeholder-icon">◎</span>
+                  <span data-i18n="g1_hint">Profile & criteria</span>
+                </div>
+              </div>
+              <div class="phone__shine" aria-hidden="true"></div>
+            </div>
+            <p class="phone__caption" data-i18n="g1_text">Set your standards once. The agent remembers everything.</p>
+          </article>
+          <article class="phone phone--center">
+            <div class="phone__frame phone__frame--hero">
+              <div class="phone__notch" aria-hidden="true"></div>
+              <div class="phone__screen">
+                <div class="phone__placeholder phone__placeholder--main">
+                  <span class="phone__placeholder-icon">✦</span>
+                  <span data-i18n="g2_hint">Agent conversations</span>
+                </div>
+              </div>
+              <div class="phone__shine" aria-hidden="true"></div>
+            </div>
+            <p class="phone__caption" data-i18n="g2_text">Watch AI dialogues unfold — only winners reach you.</p>
+          </article>
+          <article class="phone phone--right">
+            <div class="phone__frame">
+              <div class="phone__notch" aria-hidden="true"></div>
+              <div class="phone__screen">
+                <div class="phone__placeholder">
+                  <span class="phone__placeholder-icon">♥</span>
+                  <span data-i18n="g3_hint">Curated matches</span>
+                </div>
+              </div>
+              <div class="phone__shine" aria-hidden="true"></div>
+            </div>
+            <p class="phone__caption" data-i18n="g3_text">Approve contacts on your terms. Privacy built in.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="benefits" id="benefits">
+    <!-- 6. Benefits -->
+    <section class="benefits section" id="benefits">
       <div class="container">
-        <h2 class="section-title" data-i18n="benefits_title">Why MatchAgent is different</h2>
-        <ul class="benefits__list">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="benefits_eyebrow">Capabilities</p>
+          <h2 class="section-title" data-i18n="benefits_title">Built for people who value time</h2>
+        </div>
+        <ul class="benefits__grid reveal-stagger">
           <li class="benefit-card">
-            <span class="benefit-card__num" aria-hidden="true">1</span>
-            <h3 class="benefit-card__title" data-i18n="b1_title">Save your time!</h3>
-            <p class="benefit-card__text" data-i18n="b1_text">No more endless scrolling through profiles. You set the task, and MatchAgent introduces you to the right people, filtering out 98% of unsuitable candidates — so you can focus on what's pleasant and useful.</p>
+            <div class="benefit-card__icon" aria-hidden="true">⏱</div>
+            <h3 class="benefit-card__title" data-i18n="b1_title">Zero wasted hours</h3>
+            <p class="benefit-card__text" data-i18n="b1_text">MatchAgent filters 98% of unsuitable profiles before they reach you. Your attention stays on what matters.</p>
           </li>
           <li class="benefit-card">
-            <span class="benefit-card__num" aria-hidden="true">2</span>
-            <h3 class="benefit-card__title" data-i18n="b2_title">No unpleasant communication</h3>
-            <p class="benefit-card__text" data-i18n="b2_text">MatchAgent filters out deceivers, scammers, liars, and time-wasters during dialogues; detects real age, weight, and height from photos. You never have to talk to toxic people.</p>
+            <div class="benefit-card__icon" aria-hidden="true">🛡</div>
+            <h3 class="benefit-card__title" data-i18n="b2_title">Screened conversations</h3>
+            <p class="benefit-card__text" data-i18n="b2_text">Deceivers, scammers, and mismatches are caught in dialogue — including photo-based age and profile verification.</p>
           </li>
           <li class="benefit-card">
-            <span class="benefit-card__num" aria-hidden="true">3</span>
-            <h3 class="benefit-card__title" data-i18n="b3_title">Only the right candidates</h3>
-            <p class="benefit-card__text" data-i18n="b3_text_merged">You get all the info you'd want about candidates in your dashboard — weight, height, hobbies, family and financial situation, and much more. We match people who truly meet your criteria.</p>
+            <div class="benefit-card__icon" aria-hidden="true">◈</div>
+            <h3 class="benefit-card__title" data-i18n="b3_title">Full candidate intel</h3>
+            <p class="benefit-card__text" data-i18n="b3_text_merged">Dashboard with lifestyle, interests, family context, and chat history — so every date is an informed choice.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="how" id="how">
+    <!-- 7. Social proof -->
+    <section class="proof section">
       <div class="container">
-        <h2 class="section-title" data-i18n="how_title">How it works</h2>
-        <ul class="how__steps">
-          <li class="step">
-            <div class="step__icon" aria-hidden="true">🎙️</div>
-            <h3 class="step__title" data-i18n="s1_title">Share your info</h3>
-            <p class="step__text" data-i18n="s1_text">You provide whatever you're comfortable sharing. The more detailed and interesting, the easier for our MatchAgent to build dialogues with potential candidates.</p>
-          </li>
-          <li class="step">
-            <div class="step__icon" aria-hidden="true">📞</div>
-            <h3 class="step__title" data-i18n="s2_title">Set tasks for your MatchAgent</h3>
-            <p class="step__text" data-i18n="s2_text">Describe your ideal candidate in detail: age, build, height, financial and family situation, hobbies, etc. MatchAgent analyzes photos, dialogue style, interests; can run psychological and sociotype tests.</p>
-          </li>
-          <li class="step">
-            <div class="step__icon" aria-hidden="true">✨</div>
-            <h3 class="step__title" data-i18n="s3_title">Get your shortlist</h3>
-            <p class="step__text" data-i18n="s3_text">You receive candidates who match your criteria, full chat history, and contact details. All that's left is to arrange a meet or accept an invitation!</p>
-          </li>
-        </ul>
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow" data-i18n="proof_eyebrow">Outcomes</p>
+          <h2 class="section-title" data-i18n="proof_title">Designed for real results</h2>
+        </div>
+        <div class="proof__grid reveal-stagger">
+          <blockquote class="quote-card">
+            <p class="quote-card__text" data-i18n="quote_1">"I stopped swiping entirely. My agent had three solid options by Friday."</p>
+            <footer class="quote-card__author" data-i18n="quote_1_author">— Early access member</footer>
+          </blockquote>
+          <blockquote class="quote-card">
+            <p class="quote-card__text" data-i18n="quote_2">"Finally dating that respects my time and my standards."</p>
+            <footer class="quote-card__author" data-i18n="quote_2_author">— Premium user</footer>
+          </blockquote>
+          <div class="proof-card">
+            <ul class="safety__list">
+              <li class="safety__item"><span class="safety__icon" aria-hidden="true">✓</span><span data-i18n="safety_1">Your data never sold or exposed</span></li>
+              <li class="safety__item"><span class="safety__icon" aria-hidden="true">✓</span><span data-i18n="safety_2">End-to-end privacy controls</span></li>
+              <li class="safety__item"><span class="safety__icon" aria-hidden="true">✓</span><span data-i18n="safety_3">Contacts shared only with your approval</span></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="safety">
+    <!-- Pricing -->
+    <section class="pricing section" id="pricing">
       <div class="container">
-        <h2 class="section-title" data-i18n="safety_title">Safety first</h2>
-        <ul class="safety__list">
-          <li class="safety__item"><span class="safety__icon" aria-hidden="true">✓</span><span data-i18n="safety_1">No disclosure of your information</span></li>
-          <li class="safety__item"><span class="safety__icon" aria-hidden="true">✓</span><span data-i18n="safety_2">Your personal data is fully protected</span></li>
-          <li class="safety__item"><span class="safety__icon" aria-hidden="true">✓</span><span data-i18n="safety_3">Your contacts are visible only after approval</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="pricing" id="pricing">
-      <div class="container">
-        <h2 class="section-title" data-i18n="pricing_title">Pricing</h2>
-        <div class="pricing__grid">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow" data-i18n="pricing_eyebrow">Plans</p>
+          <h2 class="section-title" data-i18n="pricing_title">Choose your pace</h2>
+        </div>
+        <div class="pricing__grid reveal-stagger">
           <a href="#" class="price-card" aria-label="Choose Basic">
             <h3 class="price-card__name" data-i18n="price_basic_name">Basic</h3>
             <p class="price-card__tokens"><small data-i18n="price_trial">3 days free</small></p>
             <p class="price-card__price"><span class="price-card__amount">$40</span> <span data-i18n="price_per_month">/ month</span></p>
-            <span class="btn btn--primary" data-i18n="price_btn">Choose</span>
+            <span class="btn btn--outline price-card__btn" data-i18n="price_btn">Select</span>
           </a>
-          <a href="#" class="price-card price-card--featured price-card--selected" aria-label="Choose Standard">
-            <span class="price-card__badge" data-i18n="price_badge">Popular</span>
-            <h3 class="price-card__name" data-i18n="price_standard_name">Standard</h3>
+          <a href="#" class="price-card price-card--featured price-card--selected" aria-label="Choose Premium">
+            <span class="price-card__badge" data-i18n="price_badge">Most popular</span>
+            <h3 class="price-card__name" data-i18n="price_standard_name">Premium</h3>
             <p class="price-card__tokens"><small data-i18n="price_trial">3 days free</small></p>
             <p class="price-card__price"><span class="price-card__amount">$100</span> <span data-i18n="price_3months">/ 3 months</span></p>
-            <span class="btn btn--primary" data-i18n="price_btn">Choose</span>
+            <span class="btn btn--primary price-card__btn" data-i18n="price_btn">Select</span>
           </a>
-          <a href="#" class="price-card" aria-label="Choose Premium">
-            <h3 class="price-card__name" data-i18n="price_premium_name">Premium</h3>
+          <a href="#" class="price-card" aria-label="Choose Ultimate">
+            <h3 class="price-card__name" data-i18n="price_premium_name">Ultimate</h3>
             <p class="price-card__tokens"><small data-i18n="price_trial">3 days free</small></p>
             <p class="price-card__price"><span class="price-card__amount">$300</span> <span data-i18n="price_per_year">/ year</span></p>
-            <span class="btn btn--primary" data-i18n="price_btn">Choose</span>
+            <span class="btn btn--outline price-card__btn" data-i18n="price_btn">Select</span>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="cta" id="register">
-      <div class="container cta__inner">
-        <h2 class="cta__title" data-i18n="cta_title">Start dating in a new way</h2>
-        <p class="cta__text" data-i18n="cta_text">Register on the site and take the first step toward meaningful dating.</p>
-        <div class="cta__buttons">
-          <a href="#register" class="btn btn--primary btn--lg" data-i18n="cta_register">Register</a>
-        </div>
+    <!-- 8. Final CTA -->
+    <section class="cta section" id="register">
+      <div class="cta__ambient" aria-hidden="true">
+        <div class="cta__orb"></div>
       </div>
-      <div class="cta__hearts" aria-hidden="true">
-        <svg class="cta__heart cta__heart--1" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 78C50 78 5 45 5 22C5 2 28 2 50 28C72 2 95 2 95 22C95 45 50 78 50 78Z" fill="currentColor"/></svg>
-        <svg class="cta__heart cta__heart--2" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 78C50 78 5 45 5 22C5 2 28 2 50 28C72 2 95 2 95 22C95 45 50 78 50 78Z" fill="currentColor"/></svg>
-        <svg class="cta__heart cta__heart--3" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 78C50 78 5 45 5 22C5 2 28 2 50 28C72 2 95 2 95 22C95 45 50 78 50 78Z" fill="currentColor"/></svg>
-        <svg class="cta__heart cta__heart--4" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 78C50 78 5 45 5 22C5 2 28 2 50 28C72 2 95 2 95 22C95 45 50 78 50 78Z" fill="currentColor"/></svg>
-        <svg class="cta__heart cta__heart--5" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 78C50 78 5 45 5 22C5 2 28 2 50 28C72 2 95 2 95 22C95 45 50 78 50 78Z" fill="currentColor"/></svg>
+      <div class="container cta__inner reveal">
+        <h2 class="cta__title" data-i18n="cta_title">Your next chapter starts here</h2>
+        <p class="cta__text" data-i18n="cta_text">Join MatchAgent — let intelligence do the heavy lifting while you live your life.</p>
+        <a href="#register" class="btn btn--primary btn--lg btn--glow" data-i18n="cta_register">Get started free</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <div class="footer__brand">
-        <a href="#" class="footer__brand-link">
-          <img class="footer__logo-img" src="assets/img/logo-header.png" alt="MatchAgent — Your AI Matches Assistant" width="150" height="60">
-        </a>
-      </div>
+      <a href="#" class="footer__brand">
+        <img class="footer__logo-img" src="assets/img/logo-header.png" alt="MatchAgent" width="120" height="48">
+      </a>
       <p class="footer__copy" data-i18n="footer_copy">© 2026 MatchAgent. All rights reserved.</p>
     </div>
   </footer>
+
+  <a href="#register" class="floating-cta btn btn--primary" data-i18n="floating_cta" aria-label="Get started">Get started</a>
 
   <script src="assets/js/main.js"></script>
 </body>

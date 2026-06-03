@@ -1,226 +1,197 @@
 /**
- * MatchAgent — landing scripts
- * No API keys or secrets. For any real integration, use server-side only.
+ * MatchAgent — premium landing
  */
-
 (function () {
   'use strict';
 
   var TRANSLATIONS = {
     ru: {
+      nav_product: 'Продукт',
       nav_how: 'Как это работает',
-      nav_features: 'Возможности',
+      nav_app: 'Приложение',
       nav_pricing: 'Тарифы',
-      nav_faq: 'Вопросы',
-      nav_signin: 'Войти',
-      nav_register: 'Регистрация',
-      aria_download: 'Скачать приложение',
-      logo_text: 'MatchAgent',
+      nav_register: 'Начать',
       aria_menu: 'Открыть меню',
-      hero_label: 'Новый формат знакомств',
-      hero_title: 'Ваше время имеет значение!',
-      hero_subtitle: 'Хватит листать ленту. Поручите рутину нам.',
-      hero_btn_join: 'Присоединяйся',
+      hero_label: 'ИИ-подбор пар',
+      hero_title_1: 'Знакомства,',
+      hero_title_2: 'на новом уровне.',
+      hero_subtitle: 'Ваш AI-агент отбирает, общается и формирует шорт-лист — вы встречаетесь только с теми, кто действительно подходит.',
+      hero_btn_join: 'Попробовать бесплатно',
       hero_btn_how: 'Как это работает',
-      intro_title: 'Настоящие знакомства с MatchAgent',
-      intro_text: 'MatchAgent помогает выйти за рамки бесконечного свайпа. Вы рассказываете о себе и ставите задачу нашему агенту — он делает всю работу за вас: подбирает пары по вашим требованиям и отсеивает лишнее. Ваш персональный ИИ-ассистент проведёт 1000 диалогов одновременно и подберёт то, что вы хотите. Вам останется лишь собраться на свидание и выбрать ресторан.',
-      benefits_title: 'Почему MatchAgent — это по-другому',
-      b1_title: 'Экономия вашего времени!',
-      b1_text: 'Никакого бесконечного листания анкет. Вы ставите задачу, и MatchAgent сразу знакомит вас с нужными людьми, отсеивая 98% неподходящих кандидатов — чтобы вы могли сосредоточиться на приятном и полезном.',
-      b2_title: 'Никакого неприятного опыта общения',
-      b2_text: 'MatchAgent на этапе диалогов отсеивает обманщиков, мошенников, врунов, пустозвонов, состоящих в браке и т.д. По фото определяет реальный возраст, вес, рост. Вы не вступаете в диалоги с токсичными людьми.',
-      b3_title: 'Только правильные кандидаты',
-      b3_text: 'Вы получаете всю информацию, которую хотели бы узнать о кандидатах, в личном кабинете.',
-      b3_text_merged: 'Вы получаете всю информацию, которую хотели бы узнать о кандидатах, в личном кабинете — вес, рост, увлечения, хобби, семейное и материальное положение и многое другое. По вашим требованиям и критериям мы подбираем людей, которые действительно соответствуют вашим ожиданиям.',
-      b4_title: 'Учится вместе с вами',
-      b4_text: 'Каждый звонок и выбор улучшают подбор: со временем совпадения становятся точнее.',
-      how_title: 'Как это работает',
-      s1_title: 'Расскажите о себе',
-      s1_text: 'Вы предоставляете ту информацию о себе, которую считаете нужной. Чем подробнее и интереснее — тем проще агенту MatchAgent строить диалоги с потенциальными кандидатами.',
-      s2_title: 'Ставьте задачи MatchAgent',
-      s2_text: 'Подробно опишите идеального кандидата: возраст, телосложение, рост, материальное и семейное положение, хобби и т.д. MatchAgent анализирует фото, манеру диалога, хобби и интересы; может проходить психологические тесты и тесты на соционику.',
-      s3_title: 'Получите результат',
-      s3_text: 'В результате вы получаете несколько кандидатов, полностью соответствующих вашим критериям, историю переписки и контакты. Остаётся только договориться о встрече или принять приглашение!',
-      gallery_title: 'Что внутри приложения?',
+      hero_note: '3 дня бесплатно · Без карты для старта',
+      stat_1_val: '1 000+',
+      stat_1_label: 'Параллельных диалогов ИИ',
+      stat_2_val: '98%',
+      stat_2_label: 'Шума отсечено',
+      stat_3_val: '24/7',
+      stat_3_label: 'Агент всегда активен',
+      stat_4_val: 'Приватно',
+      stat_4_label: 'Контакты по вашим правилам',
+      product_eyebrow: 'Почему MatchAgent',
+      intro_title: 'Интеллект встречает намерение',
+      intro_text: 'Хватит отдавать внимание алгоритмам. Расскажите MatchAgent, кто вы и кого ищете — агент ведёт диалоги, проверяет совместимость и формирует шорт-лист, достойный вашего вечера.',
+      product_p1: 'Подбор по критериям, не случайные свайпы',
+      product_p2: 'Глубокий скрининг до первого «привет»',
+      product_p3: 'Полная прозрачность в личном кабинете',
+      panel_label: 'Статус агента',
+      panel_metric: '847',
+      panel_metric_sub: 'проверено сегодня',
+      panel_footer: '12 матчей готовы к просмотру',
+      how_eyebrow: 'Процесс',
+      how_title: 'Три шага к лучшим свиданиям',
+      s1_title: 'Опишите себя',
+      s1_text: 'Расскажите о ценностях, образе жизни, границах. Чем богаче ввод — тем точнее агент.',
+      s2_title: 'Поставьте задачу агенту',
+      s2_text: 'Детально опишите идеального кандидата. MatchAgent анализирует фото, тон, интересы и проводит проверки совместимости.',
+      s3_title: 'Получите шорт-лист',
+      s3_text: 'Верифицированные кандидаты с полным контекстом. Выбирайте ресторан — остальное мы сделали.',
+      gallery_eyebrow: 'Внутри MatchAgent',
+      gallery_title: 'Ваш центр управления',
+      gallery_lead: 'Замените заглушки скриншотами Telegram-бота — вставьте изображения в рамки телефонов.',
       g1_label: 'Профиль',
-      g1_text: 'Профили, где важны характер, голос и настроение, а не только фото.',
-      g2_label: 'Общение',
-      g2_text: 'Функции для живого контакта без долгого ожидания ответов.',
-      g3_label: 'Помощник',
-      g3_text: 'Встроенный помощник подскажет, как находить более совместимых партнёров.',
-      features_title: 'Ключевые возможности',
-      f1_title: 'Знакомства через голос',
-      f1_text: 'Общайтесь в реальном времени и чувствуйте совместимость по голосу и манере общения.',
-      f2_title: 'Честная обратная связь',
-      f2_text: 'Понимайте, что сработало, а что нет, и как улучшить свои совпадения.',
-      f3_title: 'Без исчезновений',
-      f3_text: 'Подсказки и структура общения помогают говорить ясно и по делу.',
-      f3_title_merged: 'Без исчезновений и умный подбор',
-      f3_text_merged: 'Подсказки и структура общения помогают говорить ясно. Мы подбираем людей под ваш тип и стиль — не случайные анкеты.',
-      f4_title: 'Умный подбор',
-      f4_text: 'Мы подбираем людей под ваш тип, предпочтения и стиль — не случайные анкеты.',
-      safety_title: 'Безопасность прежде всего',
-      safety_1: 'Никакого разглашения информации',
-      safety_2: 'Личные данные полностью сохранены',
-      safety_3: 'Ваши контакты видны только после одобрения',
-      pricing_title: 'Тарифы',
+      g1_hint: 'Профиль и критерии',
+      g1_text: 'Задайте стандарты один раз. Агент всё запомнит.',
+      g2_hint: 'Диалоги агента',
+      g2_text: 'ИИ ведёт беседы — до вас доходят только победители.',
+      g3_hint: 'Отобранные матчи',
+      g3_text: 'Контакты только с вашего одобрения. Приватность по умолчанию.',
+      benefits_eyebrow: 'Возможности',
+      benefits_title: 'Для тех, кто ценит время',
+      b1_title: 'Ноль потерянных часов',
+      b1_text: 'MatchAgent отсекает 98% неподходящих профилей. Ваше внимание — только на важном.',
+      b2_title: 'Проверенные диалоги',
+      b2_text: 'Обманщики и несоответствия выявляются в переписке — включая верификацию по фото.',
+      b3_text_merged: 'Дашборд с образом жизни, интересами, контекстом и историей чата — каждое свидание осознанно.',
+      proof_eyebrow: 'Результаты',
+      proof_title: 'Создано для реальных итогов',
+      quote_1: '«Я перестал свайпать. К пятнице агент подготовил три сильных варианта.»',
+      quote_1_author: '— Участник раннего доступа',
+      quote_2: '«Наконец знакомства, которые уважают моё время и стандарты.»',
+      quote_2_author: '— Пользователь Premium',
+      safety_1: 'Данные не продаются и не раскрываются',
+      safety_2: 'Полный контроль приватности',
+      safety_3: 'Контакты только после вашего одобрения',
+      pricing_eyebrow: 'Тарифы',
+      pricing_title: 'Выберите темп',
       price_basic_name: 'Базовый',
       price_trial: '3 дня бесплатно',
-      price_per_week: '/ нед.',
       price_per_month: '/ мес.',
       price_3months: '/ 3 мес.',
       price_per_year: '/ год',
       price_btn: 'Выбрать',
       price_badge: 'Популярный',
-      price_standard_name: 'Стандарт',
-      price_premium_name: 'Премиум',
-      faq_title: 'Частые вопросы',
-      faq_q1: 'Как MatchAgent подбирает пары?',
-      faq_a1: 'Мы учитываем голос, ответы на вопросы, фото, возраст, предпочтения и активность. Алгоритм со временем лучше понимает ваш тип.',
-      faq_q2: 'Нужно ли верифицировать профиль?',
-      faq_a2: 'Верификация не обязательна, но повышает доверие других пользователей и улучшает качество совпадений.',
-      faq_q3: 'Можно ли пользоваться бесплатно?',
-      faq_a3: 'Да, базовые функции доступны бесплатно. Тарифы дают больше токенов для звонков и расширенные возможности.',
-      cta_title: 'Начните знакомства по-новому',
-      cta_text: 'Зарегистрируйтесь на сайте и сделайте первый шаг к осмысленным знакомствам.',
-      cta_register: 'Регистрация',
-      footer_tagline: 'Знакомства с смыслом',
-      footer_copy: '© 2026 MatchAgent. Все права защищены.'
+      price_standard_name: 'Премиум',
+      price_premium_name: 'Ultimate',
+      cta_title: 'Ваш следующий этап начинается здесь',
+      cta_text: 'Присоединяйтесь к MatchAgent — пусть интеллект берёт на себя рутину, пока вы живёте.',
+      cta_register: 'Начать бесплатно',
+      footer_copy: '© 2026 MatchAgent. Все права защищены.',
+      floating_cta: 'Начать'
     },
     en: {
+      nav_product: 'Product',
       nav_how: 'How it works',
-      nav_features: 'Features',
+      nav_app: 'Inside the app',
       nav_pricing: 'Pricing',
-      nav_faq: 'FAQ',
-      nav_signin: 'Sign in',
-      nav_register: 'Register',
-      aria_download: 'Download app',
-      logo_text: 'MatchAgent',
+      nav_register: 'Get started',
       aria_menu: 'Open menu',
-      hero_label: 'A new way to date',
-      hero_title: 'Your time matters!',
-      hero_subtitle: 'Stop scrolling the feed. Leave the routine to us.',
-      hero_btn_join: 'Join now',
-      hero_btn_how: 'How it works',
-      intro_title: 'Real dating with MatchAgent',
-      intro_text: 'MatchAgent helps you move beyond endless swiping. You tell us about yourself and set the task for our agent — it does all the work for you: finds matches to your criteria and filters out the rest. Your personal AI assistant can run 1000 conversations at once and pick what you want. All you have to do is get ready for the date and choose the restaurant.',
-      benefits_title: 'Why MatchAgent is different',
-      b1_title: 'Save your time!',
-      b1_text: 'No more endless scrolling through profiles. You set the task, and MatchAgent introduces you to the right people, filtering out 98% of unsuitable candidates — so you can focus on what\'s pleasant and useful.',
-      b2_title: 'No unpleasant communication',
-      b2_text: 'MatchAgent filters out deceivers, scammers, liars, and time-wasters during dialogues; detects real age, weight, and height from photos. You never have to talk to toxic people.',
-      b3_title: 'Only the right candidates',
-      b3_text: 'See why a conversation didn’t work out and get clear feedback, so you’re never left wondering.',
-      b3_text_merged: 'You get all the info you\'d want about candidates in your dashboard — weight, height, hobbies, family and financial situation, and much more. We match people who truly meet your criteria.',
-      b4_title: 'Learns with you',
-      b4_text: 'Every call and choice improves the algorithm — your matches get better over time.',
-      how_title: 'How it works',
-      s1_title: 'Share your info',
-      s1_text: 'You provide whatever you\'re comfortable sharing. The more detailed and interesting, the easier for our MatchAgent to build dialogues with potential candidates.',
-      s2_title: 'Set tasks for your MatchAgent',
-      s2_text: 'Describe your ideal candidate in detail: age, build, height, financial and family situation, hobbies, etc. MatchAgent analyzes photos, dialogue style, interests; can run psychological and sociotype tests.',
-      s3_title: 'Get your shortlist',
-      s3_text: 'You receive candidates who match your criteria, full chat history, and contact details. All that\'s left is to arrange a meet or accept an invitation!',
-      gallery_title: 'What’s inside the app?',
+      hero_label: 'AI-powered matching',
+      hero_title_1: 'Dating,',
+      hero_title_2: 'elevated.',
+      hero_subtitle: 'Your personal AI agent screens, converses, and curates — so you only meet people who truly fit.',
+      hero_btn_join: 'Start free trial',
+      hero_btn_how: 'See how it works',
+      hero_note: '3 days free · No card required to explore',
+      stat_1_val: '1,000+',
+      stat_1_label: 'Parallel AI dialogues',
+      stat_2_val: '98%',
+      stat_2_label: 'Noise filtered out',
+      stat_3_val: '24/7',
+      stat_3_label: 'Agent always on',
+      stat_4_val: 'Private',
+      stat_4_label: 'Contacts on your terms',
+      product_eyebrow: 'The MatchAgent difference',
+      intro_title: 'Intelligence meets intention',
+      intro_text: 'Stop feeding algorithms your attention. Tell MatchAgent who you are and who you want — our agent runs the conversations, validates compatibility, and delivers a shortlist worth your evening.',
+      product_p1: 'Criteria-driven matching, not random swipes',
+      product_p2: 'Deep screening before you ever say hello',
+      product_p3: 'Full transparency in your private dashboard',
+      panel_label: 'Live agent status',
+      panel_metric: '847',
+      panel_metric_sub: 'screened today',
+      panel_footer: '12 matches ready for review',
+      how_eyebrow: 'Process',
+      how_title: 'Three steps to better dates',
+      s1_title: 'Define yourself',
+      s1_text: 'Share what matters — values, lifestyle, boundaries. The richer the input, the sharper the agent.',
+      s2_title: 'Brief your agent',
+      s2_text: 'Describe your ideal match in detail. MatchAgent analyzes photos, tone, interests, and runs structured compatibility checks.',
+      s3_title: 'Meet your shortlist',
+      s3_text: 'Receive vetted candidates with full context. Choose the restaurant — we handled the rest.',
+      gallery_eyebrow: 'Inside MatchAgent',
+      gallery_title: 'Your command center',
+      gallery_lead: 'Replace placeholders with your Telegram bot screenshots — drop images into each phone frame.',
       g1_label: 'Profile',
-      g1_text: 'Profiles where personality, voice, and vibe matter — not just pictures.',
-      g2_label: 'Connection',
-      g2_text: 'Features for live connection without long waits for replies.',
-      g3_label: 'Assistant',
-      g3_text: 'A built-in assistant helps you find more compatible partners.',
-      features_title: 'Key features',
-      f1_title: 'Voice-first dating',
-      f1_text: 'Connect in real time and feel compatibility through voice and style.',
-      f2_title: 'Honest feedback',
-      f2_text: 'Understand what works, what doesn’t, and how to improve your matches.',
-      f3_title: 'No ghosting',
-      f3_text: 'Prompts and structure support clearer communication.',
-      f3_title_merged: 'No ghosting & smart matching',
-      f3_text_merged: 'Prompts and structure support clearer communication. We match you to your type and style — not random profiles.',
-      f4_title: 'Smart matching',
-      f4_text: 'We match you to your type, preferences, and style — not random profiles.',
-      safety_title: 'Safety first',
-      safety_1: 'No disclosure of your information',
-      safety_2: 'Your personal data is fully protected',
-      safety_3: 'Your contacts are visible only after approval',
-      pricing_title: 'Pricing',
+      g1_hint: 'Profile & criteria',
+      g1_text: 'Set your standards once. The agent remembers everything.',
+      g2_hint: 'Agent conversations',
+      g2_text: 'Watch AI dialogues unfold — only winners reach you.',
+      g3_hint: 'Curated matches',
+      g3_text: 'Approve contacts on your terms. Privacy built in.',
+      benefits_eyebrow: 'Capabilities',
+      benefits_title: 'Built for people who value time',
+      b1_title: 'Zero wasted hours',
+      b1_text: 'MatchAgent filters 98% of unsuitable profiles before they reach you. Your attention stays on what matters.',
+      b2_title: 'Screened conversations',
+      b2_text: 'Deceivers, scammers, and mismatches are caught in dialogue — including photo-based age and profile verification.',
+      b3_text_merged: 'Dashboard with lifestyle, interests, family context, and chat history — so every date is an informed choice.',
+      proof_eyebrow: 'Outcomes',
+      proof_title: 'Designed for real results',
+      quote_1: '"I stopped swiping entirely. My agent had three solid options by Friday."',
+      quote_1_author: '— Early access member',
+      quote_2: '"Finally dating that respects my time and my standards."',
+      quote_2_author: '— Premium user',
+      safety_1: 'Your data never sold or exposed',
+      safety_2: 'End-to-end privacy controls',
+      safety_3: 'Contacts shared only with your approval',
+      pricing_eyebrow: 'Plans',
+      pricing_title: 'Choose your pace',
       price_basic_name: 'Basic',
       price_trial: '3 days free',
-      price_per_week: '/ wk',
       price_per_month: '/ month',
       price_3months: '/ 3 months',
       price_per_year: '/ year',
-      price_btn: 'Choose',
-      price_badge: 'Popular',
-      price_standard_name: 'Standard',
-      price_premium_name: 'Premium',
-      faq_title: 'FAQ',
-      faq_q1: 'How does MatchAgent match people?',
-      faq_a1: 'We use voice, answers, photos, age, preferences, and activity. The algorithm gets better at understanding your type over time.',
-      faq_q2: 'Do I need to verify my profile?',
-      faq_a2: 'Verification is optional but builds trust and improves match quality.',
-      faq_q3: 'Is there a free tier?',
-      faq_a3: 'Yes, core features are free. Paid plans give more tokens and extra features.',
-      cta_title: 'Start dating in a new way',
-      cta_text: 'Register on the site and take the first step toward meaningful dating.',
-      cta_register: 'Register',
-      footer_tagline: 'Dating that matters',
-      footer_copy: '© 2026 MatchAgent. All rights reserved.'
+      price_btn: 'Select',
+      price_badge: 'Most popular',
+      price_standard_name: 'Premium',
+      price_premium_name: 'Ultimate',
+      cta_title: 'Your next chapter starts here',
+      cta_text: 'Join MatchAgent — let intelligence do the heavy lifting while you live your life.',
+      cta_register: 'Get started free',
+      footer_copy: '© 2026 MatchAgent. All rights reserved.',
+      floating_cta: 'Get started'
     }
   };
 
   var header = document.querySelector('.header');
   var burger = document.querySelector('.burger');
   var nav = document.querySelector('.nav');
-  var navLinks = document.querySelectorAll('.nav a');
-
-  function getStoredTheme() {
-    try {
-      var t = localStorage.getItem('svt-theme');
-      return t === 'light' || t === 'dark' ? t : 'dark';
-    } catch (_) {
-      return 'dark';
-    }
-  }
-
-  function applyTheme(theme) {
-    var root = document.documentElement;
-    root.removeAttribute('data-theme');
-    root.classList.remove('auto-theme');
-    if (theme === 'light') {
-      root.setAttribute('data-theme', 'light');
-    } else {
-      root.setAttribute('data-theme', 'dark');
-    }
-    try {
-      localStorage.setItem('svt-theme', theme);
-    } catch (_) {}
-    updateThemeButtons();
-  }
-
-  function updateThemeButtons() {
-    var current = getStoredTheme();
-    document.querySelectorAll('.theme-switcher__btn').forEach(function (btn) {
-      var theme = btn.getAttribute('data-theme');
-      btn.setAttribute('aria-pressed', theme === current ? 'true' : 'false');
-    });
-  }
+  var floatingCta = document.querySelector('.floating-cta');
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function getStoredLang() {
     try {
-      var l = localStorage.getItem('svt-lang');
+      var l = localStorage.getItem('ma-lang');
       return l === 'en' || l === 'ru' ? l : 'en';
     } catch (_) {
-      return 'ru';
+      return 'en';
     }
   }
 
   function setLang(lang) {
     var t = TRANSLATIONS[lang];
     if (!t) return;
-    try {
-      localStorage.setItem('svt-lang', lang);
-    } catch (_) {}
+    try { localStorage.setItem('ma-lang', lang); } catch (_) {}
     document.documentElement.setAttribute('lang', lang);
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var key = el.getAttribute('data-i18n');
@@ -232,31 +203,20 @@
       if (attr && key && t[key] != null) el.setAttribute(attr, t[key]);
     });
     document.querySelectorAll('.lang-switcher__btn').forEach(function (btn) {
-      var isActive = btn.getAttribute('data-lang') === lang;
-      btn.classList.toggle('active', isActive);
-      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      var active = btn.getAttribute('data-lang') === lang;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
   }
 
-  // Theme switcher buttons
-  document.querySelectorAll('.theme-switcher__btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var theme = this.getAttribute('data-theme');
-      applyTheme(theme);
-    });
-  });
-
-  // Language switcher buttons
   document.querySelectorAll('.lang-switcher__btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      setLang(this.getAttribute('data-lang'));
+      setLang(btn.getAttribute('data-lang'));
     });
   });
 
-  applyTheme(getStoredTheme());
   setLang(getStoredLang());
 
-  // ----- Mobile menu -----
   if (burger && nav) {
     burger.addEventListener('click', function () {
       var open = burger.getAttribute('aria-expanded') === 'true';
@@ -264,7 +224,7 @@
       nav.classList.toggle('nav--open', !open);
       document.body.style.overflow = open ? '' : 'hidden';
     });
-    navLinks.forEach(function (link) {
+    nav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         burger.setAttribute('aria-expanded', 'false');
         nav.classList.remove('nav--open');
@@ -273,15 +233,44 @@
     });
   }
 
-  // ----- Header on scroll -----
   function onScroll() {
-    if (!header) return;
-    header.classList.toggle('header--scrolled', window.scrollY > 50);
+    if (header) header.classList.toggle('header--scrolled', window.scrollY > 40);
+    if (floatingCta) {
+      floatingCta.classList.toggle('is-visible', window.scrollY > 500);
+    }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // ----- Pricing: one selected card, no scroll jump; button style only via CSS -----
+  if (!reducedMotion && 'IntersectionObserver' in window) {
+    var revealObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { root: null, rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function (el) {
+      revealObs.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function (el) {
+      el.classList.add('is-visible');
+    });
+  }
+
+  if (!reducedMotion) {
+    var hero = document.querySelector('.hero__ambient');
+    if (hero) {
+      window.addEventListener('scroll', function () {
+        var y = Math.min(window.scrollY * 0.15, 120);
+        hero.style.transform = 'translate3d(0, ' + y + 'px, 0)';
+      }, { passive: true });
+    }
+  }
+
   document.querySelectorAll('.price-card').forEach(function (card) {
     card.addEventListener('click', function (e) {
       e.preventDefault();
@@ -292,23 +281,22 @@
     });
   });
 
-  // ----- Smooth scroll (except pricing cards) -----
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       if (anchor.closest('.price-card')) return;
-      var id = this.getAttribute('href');
-      if (id === '#') return;
+      var id = anchor.getAttribute('href');
+      if (!id || id === '#') return;
       var target = document.querySelector(id);
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        var instant = window.matchMedia('(max-width: 899px)').matches || reducedMotion;
+        target.scrollIntoView({ behavior: instant ? 'auto' : 'smooth', block: 'start' });
       }
     });
   });
 
-  window.SVT = window.SVT || {};
-  window.SVT.setTheme = applyTheme;
-  window.SVT.getTheme = getStoredTheme;
-  window.SVT.setLang = setLang;
-  window.SVT.getLang = getStoredLang;
+  window.MatchAgent = {
+    setLang: setLang,
+    getLang: getStoredLang
+  };
 })();
