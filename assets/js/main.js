@@ -12,13 +12,14 @@
       nav_pricing: 'Тарифы',
       nav_register: 'Начать',
       aria_menu: 'Открыть меню',
-      hero_label: 'ИИ-подбор пар',
-      hero_title_1: 'Знакомства,',
-      hero_title_2: 'на новом уровне.',
-      hero_subtitle: 'Ваш AI-агент отбирает, общается и формирует шорт-лист — вы встречаетесь только с теми, кто действительно подходит.',
+      hero_label: 'MatchAgent',
+      hero_title_1: 'Только те,',
+      hero_title_2: 'кто вам подходят.',
+      hero_subtitle: 'AI-агент отбирает, общается и формирует шорт-лист — каждое знакомство осмысленное.',
       hero_btn_join: 'Попробовать бесплатно',
       hero_btn_how: 'Как это работает',
-      hero_note: '3 дня бесплатно · Без карты для старта',
+      hero_note: '3 дня бесплатно · Карта не нужна для старта',
+      hero_scroll_aria: 'Прокрутить вниз',
       stat_1_val: '1 000+',
       stat_1_label: 'Параллельных диалогов ИИ',
       stat_2_val: '98%',
@@ -95,13 +96,14 @@
       nav_pricing: 'Pricing',
       nav_register: 'Get started',
       aria_menu: 'Open menu',
-      hero_label: 'AI-powered matching',
-      hero_title_1: 'Dating,',
-      hero_title_2: 'elevated.',
-      hero_subtitle: 'Your personal AI agent screens, converses, and curates — so you only meet people who truly fit.',
+      hero_label: 'MatchAgent',
+      hero_title_1: 'Meet people',
+      hero_title_2: 'worth your time.',
+      hero_subtitle: 'An AI agent screens, converses, and shortlists on your behalf — so every introduction is intentional.',
       hero_btn_join: 'Start free trial',
       hero_btn_how: 'See how it works',
-      hero_note: '3 days free · No card required to explore',
+      hero_note: '3-day trial · No card required to explore',
+      hero_scroll_aria: 'Scroll to learn more',
       stat_1_val: '1,000+',
       stat_1_label: 'Parallel AI dialogues',
       stat_2_val: '98%',
@@ -265,7 +267,7 @@
     var hero = document.querySelector('.hero__ambient');
     if (hero) {
       window.addEventListener('scroll', function () {
-        var y = Math.min(window.scrollY * 0.15, 120);
+        var y = Math.min(window.scrollY * 0.08, 72);
         hero.style.transform = 'translate3d(0, ' + y + 'px, 0)';
       }, { passive: true });
     }
