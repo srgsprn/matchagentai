@@ -31,9 +31,27 @@
     })();
   </script>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/cinematic-sections.css">
 </head>
 <body>
   <div class="page-noise" aria-hidden="true"></div>
+
+  <div class="brand-intro" id="brand-intro" aria-hidden="true">
+    <div class="brand-intro__veil"></div>
+    <div class="brand-intro__wordmark">
+      <span class="brand-intro__side">MATCH</span>
+      <span class="brand-intro__core">
+        <svg class="brand-intro__svg" viewBox="0 0 56 56" aria-hidden="true">
+          <g class="brand-intro__bond" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="22" cy="28" r="9"/>
+            <circle cx="34" cy="28" r="9"/>
+          </g>
+          <path class="brand-intro__heart" d="M28 40s-12-9.5-12-16a6 6 0 0 1 12 0 6 6 0 0 1 12 0c0 6.5-12 16-12 16z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="brand-intro__side">AGENT</span>
+    </div>
+  </div>
 
   <header class="header">
     <div class="container header__inner">
@@ -66,25 +84,29 @@
   <main>
     <!-- 1. Hero -->
     <section class="hero" id="top">
-      <div class="hero__ambient" aria-hidden="true">
-        <div class="hero__spotlight"></div>
+      <div class="hero__cinema" aria-hidden="true">
+        <div class="hero__mesh"></div>
+        <div class="hero__aurora"></div>
         <div class="hero__orb hero__orb--1"></div>
         <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+        <div class="hero__grain"></div>
+        <div class="hero__vignette"></div>
       </div>
       <div class="container hero__inner">
         <p class="hero__eyebrow" data-i18n="hero_label">MatchAgent</p>
         <h1 class="hero__title">
-          <span class="hero__title-line" data-i18n="hero_title_1">Meet people</span>
-          <span class="hero__title-line hero__title-accent" data-i18n="hero_title_2">worth your time.</span>
+          <span class="hero__title-line" data-i18n="hero_title_1">Connection,</span>
+          <span class="hero__title-line hero__title-accent" data-i18n="hero_title_2">curated by intelligence.</span>
         </h1>
-        <p class="hero__subtitle" data-i18n="hero_subtitle">An AI agent screens, converses, and shortlists on your behalf — so every introduction is intentional.</p>
+        <p class="hero__subtitle" data-i18n="hero_subtitle">An AI agent screens, converses, and shortlists — so every introduction is intentional and worth your time.</p>
         <div class="hero__actions">
           <a href="#register" class="btn btn--primary btn--lg hero__cta-primary" data-i18n="hero_btn_join">Start free trial</a>
-          <a href="#how" class="btn btn--ghost btn--lg" data-i18n="hero_btn_how">See how it works</a>
+          <a href="#how" class="btn btn--ghost btn--lg" data-i18n="hero_btn_how">See the process</a>
         </div>
-        <p class="hero__note" data-i18n="hero_note">3-day trial · No card required to explore</p>
+        <p class="hero__note" data-i18n="hero_note">3-day trial · No card required</p>
       </div>
-      <a href="#product" class="hero__scroll" aria-label="Scroll to learn more" data-i18n-attr="aria-label" data-i18n-attr-key="hero_scroll_aria">
+      <a href="#product" class="hero__scroll" aria-label="Scroll" data-i18n-attr="aria-label" data-i18n-attr-key="hero_scroll_aria">
         <span class="hero__scroll-line" aria-hidden="true"></span>
       </a>
       <div class="hero__fade" aria-hidden="true"></div>
@@ -173,45 +195,29 @@
       </div>
     </section>
 
-    <!-- 4. How it works -->
+    <!-- 4. Process -->
     <section class="how section" id="how">
       <div class="container how__wrap">
         <div class="section-head section-head--center reveal">
-          <p class="eyebrow" data-i18n="how_eyebrow">How it works</p>
-          <h2 class="section-title" data-i18n="how_title">Three steps. One clear path.</h2>
-          <p class="section-lead section-lead--center" data-i18n="how_lead">From your profile to a verified shortlist — MatchAgent handles everything in between.</p>
+          <p class="eyebrow" data-i18n="how_eyebrow">Process</p>
+          <h2 class="section-title" data-i18n="how_title">A path shaped for you</h2>
+          <p class="section-lead section-lead--center" data-i18n="how_lead">Three quiet steps from profile to shortlist — no noise, no guesswork.</p>
         </div>
-        <div class="how__track" aria-hidden="true"></div>
         <ol class="how__timeline reveal-stagger">
           <li class="step-card">
-            <div class="step-card__top">
-              <span class="step-card__num" aria-hidden="true">01</span>
-              <div class="step-card__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 14a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" stroke-width="1.5"/><path d="M19 11v1a7 7 0 01-14 0v-1M12 19v2M8 21h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              </div>
-            </div>
-            <h3 class="step-card__title" data-i18n="s1_title">Tell us who you are</h3>
-            <p class="step-card__text" data-i18n="s1_text">Share your values, lifestyle, and boundaries. The more context you give, the sharper the agent becomes.</p>
+            <span class="step-card__beacon" aria-hidden="true"></span>
+            <h3 class="step-card__title" data-i18n="s1_title">Define who you are</h3>
+            <p class="step-card__text" data-i18n="s1_text">Values, lifestyle, boundaries — the agent learns what matters to you.</p>
           </li>
           <li class="step-card">
-            <div class="step-card__top">
-              <span class="step-card__num" aria-hidden="true">02</span>
-              <div class="step-card__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h10M4 18h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="18" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
-              </div>
-            </div>
-            <h3 class="step-card__title" data-i18n="s2_title">Set your match criteria</h3>
-            <p class="step-card__text" data-i18n="s2_text">Describe your ideal partner. MatchAgent screens photos, tone, and interests — then runs structured compatibility checks.</p>
+            <span class="step-card__beacon" aria-hidden="true"></span>
+            <h3 class="step-card__title" data-i18n="s2_title">Set your criteria</h3>
+            <p class="step-card__text" data-i18n="s2_text">Describe your ideal match. We screen tone, interests, and compatibility in depth.</p>
           </li>
           <li class="step-card">
-            <div class="step-card__top">
-              <span class="step-card__num" aria-hidden="true">03</span>
-              <div class="step-card__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.4 4.8 5.4.8-3.9 3.8.9 5.4L12 15.8 7.2 17.8l.9-5.4L4.2 8.6l5.4-.8L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-              </div>
-            </div>
-            <h3 class="step-card__title" data-i18n="s3_title">Review your shortlist</h3>
-            <p class="step-card__text" data-i18n="s3_text">Get vetted matches with full context. You choose who to meet — we did the screening.</p>
+            <span class="step-card__beacon" aria-hidden="true"></span>
+            <h3 class="step-card__title" data-i18n="s3_title">Meet your shortlist</h3>
+            <p class="step-card__text" data-i18n="s3_text">Vetted matches with context. You choose who to meet — we handled the rest.</p>
           </li>
         </ol>
       </div>
@@ -286,29 +292,32 @@
       </div>
     </section>
 
-    <!-- 6. Benefits -->
+    <!-- 6. Capabilities -->
     <section class="benefits section" id="benefits">
       <div class="container">
         <div class="section-head section-head--center reveal">
-          <p class="eyebrow" data-i18n="benefits_eyebrow">Why it works</p>
-          <h2 class="section-title" data-i18n="benefits_title">Built for intentional dating</h2>
-          <p class="section-lead section-lead--center" data-i18n="benefits_lead">Less noise, stronger matches, and full context before you ever meet.</p>
+          <p class="eyebrow" data-i18n="benefits_eyebrow">Capabilities</p>
+          <h2 class="section-title" data-i18n="benefits_title">Power, quietly delivered</h2>
+          <p class="section-lead section-lead--center" data-i18n="benefits_lead">Advanced matching infrastructure — presented with restraint.</p>
         </div>
         <ul class="benefits__grid reveal-stagger">
           <li class="benefit-card">
-            <div class="benefit-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-            <h3 class="benefit-card__title" data-i18n="b1_title">Reclaim your time</h3>
-            <p class="benefit-card__text" data-i18n="b1_text">MatchAgent filters 98% of unsuitable profiles before they reach you — your attention stays on what matters.</p>
+            <span class="benefit-card__sheen" aria-hidden="true"></span>
+            <span class="benefit-card__accent" aria-hidden="true"></span>
+            <h3 class="benefit-card__title" data-i18n="b1_title">Time reclaimed</h3>
+            <p class="benefit-card__text" data-i18n="b1_text">98% of unsuitable profiles filtered before they reach you.</p>
           </li>
           <li class="benefit-card">
-            <div class="benefit-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
-            <h3 class="benefit-card__title" data-i18n="b2_title">Screened conversations</h3>
-            <p class="benefit-card__text" data-i18n="b2_text">Scammers and mismatches are caught in dialogue, including photo-based verification.</p>
+            <span class="benefit-card__sheen" aria-hidden="true"></span>
+            <span class="benefit-card__accent" aria-hidden="true"></span>
+            <h3 class="benefit-card__title" data-i18n="b2_title">Verified dialogue</h3>
+            <p class="benefit-card__text" data-i18n="b2_text">Inconsistencies and risk signals caught before you connect.</p>
           </li>
           <li class="benefit-card">
-            <div class="benefit-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 18h16M6 14l3-8h6l3 8M9 14h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3 class="benefit-card__title" data-i18n="b3_title">Full candidate context</h3>
-            <p class="benefit-card__text" data-i18n="b3_text_merged">Lifestyle, interests, family context, and chat history — every date is an informed choice.</p>
+            <span class="benefit-card__sheen" aria-hidden="true"></span>
+            <span class="benefit-card__accent" aria-hidden="true"></span>
+            <h3 class="benefit-card__title" data-i18n="b3_title">Full context</h3>
+            <p class="benefit-card__text" data-i18n="b3_text_merged">Lifestyle, interests, and conversation history — every choice informed.</p>
           </li>
         </ul>
       </div>

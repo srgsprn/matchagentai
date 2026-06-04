@@ -15,11 +15,11 @@
       nav_register: 'Начать',
       aria_menu: 'Открыть меню',
       hero_label: 'MatchAgent',
-      hero_title_1: 'Только те,',
-      hero_title_2: 'кто вам подходят.',
-      hero_subtitle: 'AI-агент отбирает, общается и формирует шорт-лист — каждое знакомство осмысленное.',
+      hero_title_1: 'Связь,',
+      hero_title_2: 'курируемая интеллектом.',
+      hero_subtitle: 'AI-агент отбирает, общается и формирует шорт-лист — каждое знакомство осмысленное и достойно вашего времени.',
       hero_btn_join: 'Попробовать бесплатно',
-      hero_btn_how: 'Как это работает',
+      hero_btn_how: 'Смотреть процесс',
       hero_note: '3 дня бесплатно · Карта не нужна для старта',
       hero_scroll_aria: 'Прокрутить вниз',
       stat_1_val: '1 000+',
@@ -42,15 +42,15 @@
       panel_metric: '847',
       panel_metric_sub: 'анкет проверено сегодня',
       panel_footer: 'матчей готовы к вашему просмотру',
-      how_eyebrow: 'Как это работает',
-      how_title: 'Три шага. Один понятный путь.',
-      how_lead: 'От профиля до верифицированного шорт-листа — MatchAgent берёт путь на себя.',
-      s1_title: 'Расскажите, кто вы',
-      s1_text: 'Поделитесь ценностями, образом жизни и границами. Чем больше контекста — тем точнее агент.',
-      s2_title: 'Задайте критерии матча',
-      s2_text: 'Опишите идеального партнёра. MatchAgent проверяет фото, тон и интересы — и запускает структурированные проверки совместимости.',
-      s3_title: 'Просмотрите шорт-лист',
-      s3_text: 'Верифицированные матчи с полным контекстом. Вы решаете, с кем встретиться — отбор уже сделан.',
+      how_eyebrow: 'Процесс',
+      how_title: 'Путь, созданный для вас',
+      how_lead: 'Три спокойных шага от профиля до шорт-листа — без шума и догадок.',
+      s1_title: 'Определите, кто вы',
+      s1_text: 'Ценности, образ жизни, границы — агент понимает, что для вас важно.',
+      s2_title: 'Задайте критерии',
+      s2_text: 'Опишите идеального партнёра. Глубокая проверка тона, интересов и совместимости.',
+      s3_title: 'Встретьте шорт-лист',
+      s3_text: 'Верифицированные матчи с контекстом. Вы выбираете — мы сделали отбор.',
       gallery_eyebrow: 'Внутри приложения',
       gallery_title: 'Посмотрите, как это выглядит',
       gallery_lead: 'Профиль, диалоги агента и отобранные матчи — всё в вашем Telegram-боте.',
@@ -65,15 +65,15 @@
       g2_text: 'ИИ ведёт диалоги — до вас доходят только сильные матчи.',
       g3_hint: 'Отобранные матчи',
       g3_text: 'Контакты только с вашего одобрения. Приватность по умолчанию.',
-      benefits_eyebrow: 'Почему это работает',
-      benefits_lead: 'Меньше шума, сильнее матчи и полный контекст до встречи.',
-      benefits_title: 'Для осознанных знакомств',
-      b1_title: 'Верните своё время',
-      b1_text: 'MatchAgent отсекает 98% неподходящих профилей — ваше внимание только на важном.',
-      b2_title: 'Проверенные диалоги',
-      b2_text: 'Мошенники и несоответствия выявляются в диалоге, включая проверку по фото.',
-      b3_title: 'Полный контекст кандидата',
-      b3_text_merged: 'Образ жизни, интересы, семейный контекст и история чата — каждое свидание осознанно.',
+      benefits_eyebrow: 'Возможности',
+      benefits_lead: 'Продвинутая инфраструктура матчинга — в сдержанной подаче.',
+      benefits_title: 'Сила — без шума',
+      b1_title: 'Время возвращено',
+      b1_text: '98% неподходящих профилей отсекаются до вас.',
+      b2_title: 'Верифицированный диалог',
+      b2_text: 'Риски и несоответствия выявляются до контакта.',
+      b3_title: 'Полный контекст',
+      b3_text_merged: 'Образ жизни, интересы и история диалога — каждый выбор осознан.',
       proof_eyebrow: 'Доверие',
       proof_lead: 'Участники раннего доступа уже заменяют бесконечные свайпы на отобранные знакомства.',
       proof_trust_title: 'Приватность по умолчанию',
@@ -116,11 +116,11 @@
       nav_register: 'Get started',
       aria_menu: 'Open menu',
       hero_label: 'MatchAgent',
-      hero_title_1: 'Meet people',
-      hero_title_2: 'worth your time.',
-      hero_subtitle: 'An AI agent screens, converses, and shortlists on your behalf — so every introduction is intentional.',
+      hero_title_1: 'Connection,',
+      hero_title_2: 'curated by intelligence.',
+      hero_subtitle: 'An AI agent screens, converses, and shortlists — so every introduction is intentional and worth your time.',
       hero_btn_join: 'Start free trial',
-      hero_btn_how: 'See how it works',
+      hero_btn_how: 'See the process',
       hero_note: '3-day trial · No card required to explore',
       hero_scroll_aria: 'Scroll to learn more',
       stat_1_val: '1,000+',
@@ -143,15 +143,15 @@
       panel_metric: '847',
       panel_metric_sub: 'profiles screened today',
       panel_footer: 'matches ready for your review',
-      how_eyebrow: 'How it works',
-      how_lead: 'From your profile to a verified shortlist — MatchAgent handles everything in between.',
-      how_title: 'Three steps. One clear path.',
-      s1_title: 'Tell us who you are',
-      s1_text: 'Share your values, lifestyle, and boundaries. The more context you give, the sharper the agent becomes.',
-      s2_title: 'Set your match criteria',
-      s2_text: 'Describe your ideal partner. MatchAgent screens photos, tone, and interests — then runs structured compatibility checks.',
-      s3_title: 'Review your shortlist',
-      s3_text: 'Get vetted matches with full context. You choose who to meet — we did the screening.',
+      how_eyebrow: 'Process',
+      how_lead: 'Three quiet steps from profile to shortlist — no noise, no guesswork.',
+      how_title: 'A path shaped for you',
+      s1_title: 'Define who you are',
+      s1_text: 'Values, lifestyle, boundaries — the agent learns what matters to you.',
+      s2_title: 'Set your criteria',
+      s2_text: 'Describe your ideal match. We screen tone, interests, and compatibility in depth.',
+      s3_title: 'Meet your shortlist',
+      s3_text: 'Vetted matches with context. You choose who to meet — we handled the rest.',
       gallery_eyebrow: 'Inside the app',
       gallery_title: 'See it in action',
       gallery_lead: 'Profile, agent conversations, and curated matches — everything you need in your Telegram bot.',
@@ -166,14 +166,14 @@
       g2_text: 'AI handles the dialogues — only strong matches reach you.',
       g3_hint: 'Curated matches',
       g3_text: 'Approve contacts on your terms. Privacy built in.',
-      benefits_eyebrow: 'Why it works',
-      benefits_title: 'Built for intentional dating',
-      b1_title: 'Reclaim your time',
-      b1_text: 'MatchAgent filters 98% of unsuitable profiles before they reach you — your attention stays on what matters.',
-      b2_title: 'Screened conversations',
-      b2_text: 'Scammers and mismatches are caught in dialogue, including photo-based verification.',
-      b3_title: 'Full candidate context',
-      b3_text_merged: 'Lifestyle, interests, family context, and chat history — every date is an informed choice.',
+      benefits_eyebrow: 'Capabilities',
+      benefits_title: 'Power, quietly delivered',
+      b1_title: 'Time reclaimed',
+      b1_text: '98% of unsuitable profiles filtered before they reach you.',
+      b2_title: 'Verified dialogue',
+      b2_text: 'Inconsistencies and risk signals caught before you connect.',
+      b3_title: 'Full context',
+      b3_text_merged: 'Lifestyle, interests, and conversation history — every choice informed.',
       proof_eyebrow: 'Trust',
       proof_title: 'Real people. Real outcomes.',
       quote_1: 'I stopped swiping entirely. My agent had three solid options by Friday.',
@@ -206,6 +206,44 @@
   };
 
   var THEME_KEY = 'ma-theme';
+
+  function initBrandIntro() {
+    var intro = document.getElementById('brand-intro');
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function complete() {
+      document.documentElement.classList.add('intro-complete');
+      document.body.style.overflow = '';
+      if (intro) intro.classList.add('is-done');
+    }
+    if (!intro) {
+      complete();
+      return;
+    }
+    try {
+      if (reduced || sessionStorage.getItem('ma-intro-done')) {
+        complete();
+        intro.remove();
+        return;
+      }
+    } catch (e) {
+      complete();
+      intro.remove();
+      return;
+    }
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(function () {
+      intro.classList.add('is-active');
+    });
+    setTimeout(function () {
+      try { sessionStorage.setItem('ma-intro-done', '1'); } catch (e) {}
+      complete();
+    }, 2600);
+    setTimeout(function () {
+      if (intro.parentNode) intro.remove();
+    }, 3300);
+  }
+
+  initBrandIntro();
 
   var header = document.querySelector('.header');
   var burger = document.querySelector('.burger');
