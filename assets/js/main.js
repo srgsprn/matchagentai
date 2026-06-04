@@ -6,6 +6,8 @@
 
   var TRANSLATIONS = {
     ru: {
+      theme_toggle_light: 'Включить светлую тему',
+      theme_toggle_dark: 'Включить тёмную тему',
       nav_product: 'Продукт',
       nav_how: 'Как это работает',
       nav_app: 'Приложение',
@@ -90,6 +92,8 @@
       floating_cta: 'Начать'
     },
     en: {
+      theme_toggle_light: 'Switch to light theme',
+      theme_toggle_dark: 'Switch to dark theme',
       nav_product: 'Product',
       nav_how: 'How it works',
       nav_app: 'Inside the app',
@@ -175,11 +179,21 @@
     }
   };
 
+  var THEME_KEY = 'ma-theme';
+
   var header = document.querySelector('.header');
   var burger = document.querySelector('.burger');
   var nav = document.querySelector('.nav');
   var floatingCta = document.querySelector('.floating-cta');
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function getStoredTheme() {
+    try {
+      var t = localStorage.getItem(THEME_KEY);
+      if (t === 'light' || t === 'dark') return t;
+    } catch (_) {}
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
 
   function getStoredLang() {
     try {
@@ -188,6 +202,22 @@
     } catch (_) {
       return 'en';
     }
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    try { localStorage.setItem(THEME_KEY, theme); } catch (_) {}
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var isLight = theme === 'light';
+    btn.setAttribute('aria-pressed', isLight ? 'true' : 'false');
+    var t = TRANSLATIONS[getStoredLang()] || TRANSLATIONS.en;
+    btn.setAttribute('aria-label', isLight ? t.theme_toggle_dark : t.theme_toggle_light);
+  }
+
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme') || 'dark';
+    applyTheme(current === 'light' ? 'dark' : 'light');
   }
 
   function setLang(lang) {
@@ -209,6 +239,7 @@
       btn.classList.toggle('active', active);
       btn.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
+    applyTheme(document.documentElement.getAttribute('data-theme') || getStoredTheme());
   }
 
   document.querySelectorAll('.lang-switcher__btn').forEach(function (btn) {
@@ -217,6 +248,10 @@
     });
   });
 
+  var themeBtn = document.getElementById('theme-toggle');
+  if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
+
+  applyTheme(getStoredTheme());
   setLang(getStoredLang());
 
   if (burger && nav) {
