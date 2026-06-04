@@ -16,11 +16,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <div class="global-mesh" aria-hidden="true"></div>
   <div class="page-noise" aria-hidden="true"></div>
 
   <header class="header">
@@ -51,24 +50,17 @@
     <!-- 1. Hero -->
     <section class="hero" id="top">
       <div class="hero__ambient" aria-hidden="true">
-        <div class="hero__mesh"></div>
         <div class="hero__orb hero__orb--1"></div>
         <div class="hero__orb hero__orb--2"></div>
         <div class="hero__orb hero__orb--3"></div>
-        <div class="hero__grid"></div>
-        <div class="hero__streak"></div>
-        <div class="hero__particles">
-          <span></span><span></span><span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
       </div>
       <div class="container hero__inner reveal">
-        <p class="eyebrow eyebrow--glow" data-i18n="hero_label">Futuristic AI matchmaking</p>
+        <p class="eyebrow" data-i18n="hero_label">AI-powered matching</p>
         <h1 class="hero__title">
-          <span data-i18n="hero_title_1">Connection,</span>
-          <span class="hero__title-accent" data-i18n="hero_title_2">curated by AI.</span>
+          <span data-i18n="hero_title_1">Dating,</span>
+          <span class="hero__title-accent" data-i18n="hero_title_2">elevated.</span>
         </h1>
-        <p class="hero__subtitle" data-i18n="hero_subtitle">An intelligent agent screens thousands of signals — so every introduction is intentional, private, and worth your time.</p>
+        <p class="hero__subtitle" data-i18n="hero_subtitle">Your personal AI agent screens, converses, and curates — so you only meet people who truly fit.</p>
         <div class="hero__actions">
           <a href="#register" class="btn btn--primary btn--lg" data-i18n="hero_btn_join">Start free trial</a>
           <a href="#how" class="btn btn--ghost btn--lg" data-i18n="hero_btn_how">See how it works</a>
@@ -99,27 +91,6 @@
             <span class="stat__label" data-i18n="stat_4_label">Contacts on your terms</span>
           </li>
         </ul>
-      </div>
-    </section>
-
-    <!-- Story: problem → solution -->
-    <section class="story section" id="story">
-      <div class="container">
-        <div class="story__grid reveal-stagger">
-          <article class="story-card story-card--problem">
-            <span class="story-card__tag" data-i18n="story_problem_tag">The problem</span>
-            <h3 class="story-card__title" data-i18n="story_problem_title">Infinite noise. Zero intention.</h3>
-            <p class="story-card__text" data-i18n="story_problem_text">Swipe culture burns attention. Most profiles never match your standards — yet you still carry the emotional cost of sorting through them.</p>
-          </article>
-          <div class="story__connector" aria-hidden="true">
-            <svg viewBox="0 0 48 24" fill="none"><path d="M0 12h40M32 6l8 6-8 6" stroke="url(#arrowGrad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="arrowGrad" x1="0" y1="12" x2="48" y2="12"><stop stop-color="#7C5CFF"/><stop offset="1" stop-color="#2DE2E6"/></linearGradient></defs></svg>
-          </div>
-          <article class="story-card story-card--solution">
-            <span class="story-card__tag story-card__tag--accent" data-i18n="story_solution_tag">The solution</span>
-            <h3 class="story-card__title" data-i18n="story_solution_title">AI that dates on your behalf.</h3>
-            <p class="story-card__text" data-i18n="story_solution_text">MatchAgent runs parallel dialogues, validates compatibility, and delivers a refined shortlist — you step in only when it matters.</p>
-          </article>
-        </div>
       </div>
     </section>
 
@@ -163,7 +134,6 @@
           <p class="eyebrow" data-i18n="how_eyebrow">Process</p>
           <h2 class="section-title" data-i18n="how_title">Three steps to better dates</h2>
         </div>
-        <div class="how__flow-line" aria-hidden="true"></div>
         <ol class="how__timeline reveal-stagger">
           <li class="step-card">
             <span class="step-card__num">01</span>
@@ -195,7 +165,6 @@
 
     <!-- 5. App showcase -->
     <section class="app-showcase section" id="app">
-      <div class="app-showcase__glow" aria-hidden="true"></div>
       <div class="container">
         <div class="section-head section-head--center reveal">
           <p class="eyebrow" data-i18n="gallery_eyebrow">Inside MatchAgent</p>
@@ -204,23 +173,20 @@
         </div>
         <div class="phones reveal-stagger">
           <article class="phone phone--left">
-            <span class="phone__callout" data-i18n="callout_1">Criteria</span>
             <div class="phone__frame">
               <div class="phone__notch" aria-hidden="true"></div>
               <div class="phone__screen">
-                <!-- <img src="assets/img/screenshot-profile.png" alt="" loading="lazy"> -->
-                <div class="phone__placeholder">
+                <!-- Replace: add <img src="assets/img/screenshot-profile.png" alt=""> -->
+                <div class="phone__placeholder" data-i18n="g1_label">
                   <span class="phone__placeholder-icon">◎</span>
                   <span data-i18n="g1_hint">Profile & criteria</span>
                 </div>
               </div>
               <div class="phone__shine" aria-hidden="true"></div>
-              <div class="phone__reflection" aria-hidden="true"></div>
             </div>
             <p class="phone__caption" data-i18n="g1_text">Set your standards once. The agent remembers everything.</p>
           </article>
           <article class="phone phone--center">
-            <span class="phone__callout phone__callout--accent" data-i18n="callout_2">Live AI</span>
             <div class="phone__frame phone__frame--hero">
               <div class="phone__notch" aria-hidden="true"></div>
               <div class="phone__screen">
@@ -230,12 +196,10 @@
                 </div>
               </div>
               <div class="phone__shine" aria-hidden="true"></div>
-              <div class="phone__reflection" aria-hidden="true"></div>
             </div>
             <p class="phone__caption" data-i18n="g2_text">Watch AI dialogues unfold — only winners reach you.</p>
           </article>
           <article class="phone phone--right">
-            <span class="phone__callout" data-i18n="callout_3">Matches</span>
             <div class="phone__frame">
               <div class="phone__notch" aria-hidden="true"></div>
               <div class="phone__screen">
@@ -245,7 +209,6 @@
                 </div>
               </div>
               <div class="phone__shine" aria-hidden="true"></div>
-              <div class="phone__reflection" aria-hidden="true"></div>
             </div>
             <p class="phone__caption" data-i18n="g3_text">Approve contacts on your terms. Privacy built in.</p>
           </article>
@@ -277,17 +240,6 @@
             <p class="benefit-card__text" data-i18n="b3_text_merged">Dashboard with lifestyle, interests, family context, and chat history — so every date is an informed choice.</p>
           </li>
         </ul>
-      </div>
-    </section>
-
-    <!-- Mid-page CTA -->
-    <section class="cta-band reveal">
-      <div class="container cta-band__inner">
-        <div class="cta-band__copy">
-          <h2 class="cta-band__title" data-i18n="cta_band_title">Ready for intentional dating?</h2>
-          <p class="cta-band__text" data-i18n="cta_band_text">Start your free trial — your agent begins screening today.</p>
-        </div>
-        <a href="#register" class="btn btn--primary btn--lg" data-i18n="cta_band_btn">Start free trial</a>
       </div>
     </section>
 
