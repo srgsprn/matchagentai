@@ -118,31 +118,57 @@
     <section class="product section" id="product">
       <div class="container product__grid">
         <div class="product__copy reveal">
-          <p class="eyebrow" data-i18n="product_eyebrow">The MatchAgent difference</p>
-          <h2 class="section-title" data-i18n="intro_title">Intelligence meets intention</h2>
-          <p class="section-lead" data-i18n="intro_text">Stop feeding algorithms your attention. Tell MatchAgent who you are and who you want — our agent runs the conversations, validates compatibility, and delivers a shortlist worth your evening.</p>
+          <p class="eyebrow" data-i18n="product_eyebrow">Why MatchAgent</p>
+          <h2 class="section-title" data-i18n="intro_title">Your standards. Our intelligence.</h2>
+          <p class="section-lead" data-i18n="intro_text">Define who you are and who you want. MatchAgent runs the conversations, validates compatibility, and delivers a shortlist worth your time.</p>
           <ul class="product__points">
-            <li data-i18n="product_p1">Criteria-driven matching, not random swipes</li>
-            <li data-i18n="product_p2">Deep screening before you ever say hello</li>
-            <li data-i18n="product_p3">Full transparency in your private dashboard</li>
+            <li class="product__point">
+              <span class="product__point-mark" aria-hidden="true"></span>
+              <span class="product__point-text" data-i18n="product_p1">Matching by criteria — not endless swipes</span>
+            </li>
+            <li class="product__point">
+              <span class="product__point-mark" aria-hidden="true"></span>
+              <span class="product__point-text" data-i18n="product_p2">Deep screening before your first hello</span>
+            </li>
+            <li class="product__point">
+              <span class="product__point-mark" aria-hidden="true"></span>
+              <span class="product__point-text" data-i18n="product_p3">Full visibility in your private dashboard</span>
+            </li>
           </ul>
         </div>
         <div class="product__visual reveal reveal--delay">
-          <div class="glass-panel glass-panel--glow">
+          <div class="product__visual-glow" aria-hidden="true"></div>
+          <article class="glass-panel" aria-label="Agent activity preview">
             <div class="glass-panel__header">
-              <span class="glass-panel__dot"></span>
-              <span class="glass-panel__dot"></span>
-              <span class="glass-panel__dot"></span>
+              <div class="glass-panel__traffic" aria-hidden="true">
+                <span class="glass-panel__dot"></span>
+                <span class="glass-panel__dot"></span>
+                <span class="glass-panel__dot"></span>
+              </div>
+              <span class="glass-panel__status">
+                <span class="glass-panel__status-dot" aria-hidden="true"></span>
+                <span data-i18n="panel_status">Active</span>
+              </span>
             </div>
             <div class="glass-panel__body">
-              <p class="glass-panel__label" data-i18n="panel_label">Live agent status</p>
-              <p class="glass-panel__metric"><span data-i18n="panel_metric">847</span> <small data-i18n="panel_metric_sub">screened today</small></p>
-              <div class="glass-panel__bars" aria-hidden="true">
-                <span style="--h:72%"></span><span style="--h:45%"></span><span style="--h:88%"></span><span style="--h:61%"></span><span style="--h:94%"></span>
+              <p class="glass-panel__label" data-i18n="panel_label">Agent activity</p>
+              <p class="glass-panel__metric">
+                <span class="glass-panel__metric-value" data-i18n="panel_metric">847</span>
+                <span class="glass-panel__metric-unit" data-i18n="panel_metric_sub">profiles screened today</span>
+              </p>
+              <div class="glass-panel__chart" aria-hidden="true">
+                <span style="--h:72%"></span>
+                <span style="--h:45%"></span>
+                <span style="--h:88%"></span>
+                <span style="--h:61%"></span>
+                <span style="--h:94%"></span>
               </div>
-              <p class="glass-panel__footer" data-i18n="panel_footer">12 matches ready for review</p>
+              <p class="glass-panel__footer">
+                <span class="glass-panel__footer-badge" data-i18n="panel_footer_count">12</span>
+                <span data-i18n="panel_footer">matches ready for your review</span>
+              </p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
