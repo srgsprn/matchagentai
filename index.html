@@ -380,26 +380,37 @@
     <!-- 8. Final CTA -->
     <section class="cta section" id="register">
       <div class="cta__ambient" aria-hidden="true">
-        <div class="cta__orb"></div>
+        <div class="cta__spotlight"></div>
       </div>
       <div class="container cta__inner reveal">
-        <h2 class="cta__title" data-i18n="cta_title">Your next chapter starts here</h2>
-        <p class="cta__text" data-i18n="cta_text">Join MatchAgent — let intelligence do the heavy lifting while you live your life.</p>
-        <a href="#register" class="btn btn--primary btn--lg btn--glow" data-i18n="cta_register">Get started free</a>
+        <p class="eyebrow cta__eyebrow" data-i18n="cta_eyebrow">Ready to begin</p>
+        <h2 class="cta__title" data-i18n="cta_title">Start meeting people who matter</h2>
+        <p class="cta__text" data-i18n="cta_text">Let MatchAgent handle the screening. You focus on the connection.</p>
+        <div class="cta__actions">
+          <a href="#register" class="btn btn--primary btn--lg cta__btn-primary" data-i18n="cta_register">Start free trial</a>
+          <a href="#pricing" class="btn btn--ghost btn--lg" data-i18n="cta_secondary">View pricing</a>
+        </div>
+        <p class="cta__note" data-i18n="cta_note">3-day trial · No card required</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <a href="#" class="footer__brand">
+      <a href="#top" class="footer__brand">
         <img class="footer__logo-img" src="assets/img/logo-header.png" alt="MatchAgent" width="120" height="48">
       </a>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#product" class="footer__link" data-i18n="nav_product">Product</a>
+        <a href="#how" class="footer__link" data-i18n="nav_how">How it works</a>
+        <a href="#app" class="footer__link" data-i18n="nav_app">Inside the app</a>
+        <a href="#pricing" class="footer__link" data-i18n="nav_pricing">Pricing</a>
+      </nav>
       <p class="footer__copy" data-i18n="footer_copy">© 2026 MatchAgent. All rights reserved.</p>
     </div>
   </footer>
 
-  <a href="#register" class="floating-cta btn btn--primary" data-i18n="floating_cta" aria-label="Get started">Get started</a>
+  <a href="#register" class="floating-cta btn btn--primary" data-i18n="floating_cta" data-i18n-attr="aria-label" data-i18n-attr-key="floating_cta">Get started</a>
 
   <script src="assets/js/main.js"></script>
 </body>
