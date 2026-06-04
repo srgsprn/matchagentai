@@ -219,54 +219,70 @@
 
     <!-- 5. App showcase -->
     <section class="app-showcase section" id="app">
-      <div class="container">
+      <div class="app-showcase__ambient" aria-hidden="true"></div>
+      <div class="container app-showcase__inner">
         <div class="section-head section-head--center reveal">
-          <p class="eyebrow" data-i18n="gallery_eyebrow">Inside MatchAgent</p>
-          <h2 class="section-title" data-i18n="gallery_title">Your command center</h2>
-          <p class="section-lead section-lead--center" data-i18n="gallery_lead">Replace placeholders with your Telegram bot screenshots — drop images into each phone frame.</p>
+          <p class="eyebrow" data-i18n="gallery_eyebrow">Inside the app</p>
+          <h2 class="section-title" data-i18n="gallery_title">See it in action</h2>
+          <p class="section-lead section-lead--center" data-i18n="gallery_lead">Profile, agent conversations, and curated matches — everything you need in your Telegram bot.</p>
         </div>
         <div class="phones reveal-stagger">
-          <article class="phone phone--left">
+          <article class="phone phone--side">
+            <span class="phone__tag" data-i18n="phone_tag_1">Profile</span>
             <div class="phone__frame">
-              <div class="phone__notch" aria-hidden="true"></div>
+              <div class="phone__island" aria-hidden="true"></div>
               <div class="phone__screen">
-                <!-- Replace: add <img src="assets/img/screenshot-profile.png" alt=""> -->
-                <div class="phone__placeholder" data-i18n="g1_label">
-                  <span class="phone__placeholder-icon">◎</span>
-                  <span data-i18n="g1_hint">Profile & criteria</span>
+                <!-- <img src="assets/img/screenshot-profile.png" alt="" loading="lazy" width="390" height="844"> -->
+                <div class="phone__placeholder">
+                  <div class="phone__mock-ui" aria-hidden="true">
+                    <span class="phone__mock-line phone__mock-line--wide"></span>
+                    <span class="phone__mock-line"></span>
+                    <span class="phone__mock-line"></span>
+                    <span class="phone__mock-chip"></span>
+                  </div>
+                  <span class="phone__placeholder-label" data-i18n="g1_hint">Profile & criteria</span>
                 </div>
               </div>
-              <div class="phone__shine" aria-hidden="true"></div>
             </div>
             <p class="phone__caption" data-i18n="g1_text">Set your standards once. The agent remembers everything.</p>
           </article>
-          <article class="phone phone--center">
+          <article class="phone phone--hero">
+            <span class="phone__tag phone__tag--accent" data-i18n="phone_tag_2">Agent</span>
             <div class="phone__frame phone__frame--hero">
-              <div class="phone__notch" aria-hidden="true"></div>
+              <div class="phone__island" aria-hidden="true"></div>
               <div class="phone__screen">
+                <!-- <img src="assets/img/screenshot-chats.png" alt="" loading="lazy" width="390" height="844"> -->
                 <div class="phone__placeholder phone__placeholder--main">
-                  <span class="phone__placeholder-icon">✦</span>
-                  <span data-i18n="g2_hint">Agent conversations</span>
+                  <div class="phone__mock-ui phone__mock-ui--chat" aria-hidden="true">
+                    <span class="phone__mock-bubble"></span>
+                    <span class="phone__mock-bubble phone__mock-bubble--alt"></span>
+                    <span class="phone__mock-bubble phone__mock-bubble--short"></span>
+                  </div>
+                  <span class="phone__placeholder-label" data-i18n="g2_hint">Agent conversations</span>
                 </div>
               </div>
-              <div class="phone__shine" aria-hidden="true"></div>
             </div>
-            <p class="phone__caption" data-i18n="g2_text">Watch AI dialogues unfold — only winners reach you.</p>
+            <p class="phone__caption" data-i18n="g2_text">AI handles the dialogues — only strong matches reach you.</p>
           </article>
-          <article class="phone phone--right">
+          <article class="phone phone--side phone--side-right">
+            <span class="phone__tag" data-i18n="phone_tag_3">Matches</span>
             <div class="phone__frame">
-              <div class="phone__notch" aria-hidden="true"></div>
+              <div class="phone__island" aria-hidden="true"></div>
               <div class="phone__screen">
+                <!-- <img src="assets/img/screenshot-matches.png" alt="" loading="lazy" width="390" height="844"> -->
                 <div class="phone__placeholder">
-                  <span class="phone__placeholder-icon">♥</span>
-                  <span data-i18n="g3_hint">Curated matches</span>
+                  <div class="phone__mock-ui phone__mock-ui--cards" aria-hidden="true">
+                    <span class="phone__mock-card"></span>
+                    <span class="phone__mock-card"></span>
+                  </div>
+                  <span class="phone__placeholder-label" data-i18n="g3_hint">Curated matches</span>
                 </div>
               </div>
-              <div class="phone__shine" aria-hidden="true"></div>
             </div>
             <p class="phone__caption" data-i18n="g3_text">Approve contacts on your terms. Privacy built in.</p>
           </article>
         </div>
+        <p class="app-showcase__note reveal" data-i18n="gallery_note">Replace placeholders with your bot screenshots — add images to <code>assets/img/</code> and uncomment the img tags.</p>
       </div>
     </section>
 
