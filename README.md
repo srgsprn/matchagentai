@@ -75,24 +75,24 @@
 ```mermaid
 flowchart LR
     subgraph Users["Пользователи"]
-        Browser[Браузер]
-        TG[Telegram]
+        Browser["Браузер"]
+        TG["Telegram"]
     end
 
     subgraph Product["MatchAgent"]
-        Landing[Лендинг<br/>matchagentai.com]
-        Bot[@Matchagent_bot]
+        Landing["Лендинг matchagentai.com"]
+        Bot["Бот Matchagent_bot"]
     end
 
     subgraph Infra["Инфраструктура"]
-        GH[GitHub Actions]
-        VPS[Nginx + SSL]
+        GH["GitHub Actions"]
+        VPS["Nginx и SSL"]
     end
 
     Browser --> Landing
     TG --> Bot
-    Landing -.->|CTA| Bot
-    GH -->|git pull| VPS
+    Landing -.->|"CTA"| Bot
+    GH -->|"git pull"| VPS
     VPS --> Landing
 ```
 
