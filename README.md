@@ -10,6 +10,8 @@
 
 > Сайт: [matchagentai.com](https://matchagentai.com) · бот: [@Matchagent_bot](https://t.me/Matchagent_bot) · репозиторий: [github.com/srgsprn/matchagentai](https://github.com/srgsprn/matchagentai)
 
+> **Статус:** проект в процессе разработки и апгрейда — лендинг и бот активно дорабатываются.
+
 ---
 
 ## О проекте
@@ -23,7 +25,7 @@
 | | |
 |---|---|
 | **Роль** | Дизайн, вёрстка, фронтенд, деплой, CI/CD |
-| **Статус** | Production |
+| **Статус** | В разработке и апгрейде |
 | **Сайт** | [matchagentai.com](https://matchagentai.com) |
 | **Продукт** | [t.me/Matchagent_bot](https://t.me/Matchagent_bot) |
 | **Коммитов** | 50+ |
